@@ -1,9 +1,10 @@
 
 interface Vehicle {
-
     // all are the abstract methods.
     default void changeGear(int a) {
-
+        if (a == 0) {
+            a = 1;
+        }
     }
     void speedUp(int a);
     void applyBrakes(int a);
@@ -17,21 +18,18 @@ class Bicycle implements Vehicle{
     // to change gear
     @Override
     public void changeGear(int newGear){
-
         gear = newGear;
     }
 
     // to increase speed
     @Override
     public void speedUp(int increment){
-
         speed = speed + increment;
     }
 
     // to decrease speed
     @Override
     public void applyBrakes(int decrement){
-
         speed = speed - decrement;
     }
 
@@ -49,21 +47,18 @@ class Bike implements Vehicle {
     // to change gear
     @Override
     public void changeGear(int newGear){
-
         gear = newGear;
     }
 
     // to increase speed
     @Override
     public void speedUp(int increment){
-
         speed = speed + increment;
     }
 
     // to decrease speed
     @Override
     public void applyBrakes(int decrement){
-
         speed = speed - decrement;
     }
 
