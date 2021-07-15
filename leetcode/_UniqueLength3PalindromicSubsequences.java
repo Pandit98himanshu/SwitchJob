@@ -1,6 +1,6 @@
 /*
  * 5809. Unique Length-3 Palindromic Subsequences
- * 
+ * https://leetcode.com/problems/unique-length-3-palindromic-subsequences/
  */
 package leetcode;
 
@@ -38,7 +38,7 @@ class _UniqueLength3PalindromicSubsequences {
 
 				int countDuplicate = 0;
 				for (Map.Entry<Character, ArrayList<Integer>> f : map.entrySet()) {
-					// if element is same as current element then continue
+					// if element is same as current element then skip current element
 					if (f.getKey() != currentChar) {
 						ArrayList<Integer> list = f.getValue();
 						if (list.size() > 1) {

@@ -1,11 +1,7 @@
 
 interface Vehicle {
     // all are the abstract methods.
-    default void changeGear(int a) {
-        if (a == 0) {
-            a = 1;
-        }
-    }
+    void changeGear(int a);
     void speedUp(int a);
     void applyBrakes(int a);
 }
