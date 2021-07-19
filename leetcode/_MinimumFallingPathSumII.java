@@ -8,13 +8,13 @@ package leetcode;
 public class _MinimumFallingPathSumII {
     static class Solution {
         /**
-         * <strong>Brute Force</strong>
+         * <strong>Brute Force</strong> - Dynamic Programming
          * <p>{@code Time Complexity: O(n * m * m)};
          * where n = number of rows, m = number of columns</p>
          * <p>{@code Space Complexity: O(1)}</p>
          * @param arr
          * @return minimum sum of a falling path with non-zero shifts.
-         * @see _MaximumNumberOfPointsWithCost
+         * @see MaximumNumberOfPointsWithCost
          */
         public int minFallingPathSum(int[][] arr) {
             int rows = arr.length, columns = arr[0].length;
@@ -36,9 +36,17 @@ public class _MinimumFallingPathSumII {
             }
             return min;
         }
-/*
-        // https://leetcode.com/problems/minimum-falling-path-sum-ii/discuss/1272688/O(N*N)-Time-c++-code
-        public int minFallingPathSum(int[][] arr) {
+
+        /**
+         * <p><strong>Efficient Approach</strong></p>
+         * Copied from <a href=https://leetcode.com/problems/minimum-falling-path-sum-ii/discuss/1272688/O(N*N)-Time-c++-code>leetcode discuss</a>
+         * <p>{@code Time Complexity: };
+         * where n = number of rows, m = number of columns</p>
+         * <p>{@code Space Complexity: }</p>
+         * @param arr
+         * @return minimum sum of a falling path with non-zero shifts.
+         */
+        public int minFallingPathSum1(int[][] arr) {
             int[][] dp = new int[arr.length][arr[0].length];
             for (int[] r : dp)
                 java.util.Arrays.fill(r, -1);
@@ -59,7 +67,6 @@ public class _MinimumFallingPathSumII {
             return min;
         }
 
- */
     }
 
     public static void main(String[] args) {
