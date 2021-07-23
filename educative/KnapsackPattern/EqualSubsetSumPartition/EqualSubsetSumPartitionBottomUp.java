@@ -25,7 +25,7 @@ class EqualSubsetSumPartitionBottomUp {
 			// with only one number, we can form a subset only when
 			// the required sum is equal to its value i.e., j == set[0]
 			for (int j = 1; j <= n; j++)
-				dp[0][j] = (j == set[0]) ? true : false;
+				dp[0][j] = (j == set[0]);
 
 			for (int i = 1; i < set.length; i++)
 				for (int j = 1; j <= n; j++)

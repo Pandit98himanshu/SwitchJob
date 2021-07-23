@@ -16,7 +16,7 @@ public class _MinimumFallingPathSumII {
          * @return minimum sum of a falling path with non-zero shifts.
          * @see MaximumNumberOfPointsWithCost
          */
-        public int minFallingPathSum(int[][] arr) {
+        public int minFallingPathSum1(int[][] arr) {
             int rows = arr.length, columns = arr[0].length;
             int min;
             for (int i = 1; i < rows; i++) {
@@ -46,7 +46,7 @@ public class _MinimumFallingPathSumII {
          * @param arr
          * @return minimum sum of a falling path with non-zero shifts.
          */
-        public int minFallingPathSum1(int[][] arr) {
+        public int minFallingPathSum(int[][] arr) {
             int[][] dp = new int[arr.length][arr[0].length];
             for (int[] r : dp)
                 java.util.Arrays.fill(r, -1);
