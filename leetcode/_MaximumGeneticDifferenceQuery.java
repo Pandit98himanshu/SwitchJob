@@ -8,12 +8,15 @@ package leetcode;
 import java.util.Arrays;
 
 public class _MaximumGeneticDifferenceQuery {
+
     static class Solution {
         /**
          * <strong>Brute Force</strong>
-         * <p>{@code Time Complexity: O(n * m)}</p>
-         * <p>{@code Space Complexity: O(n)};
-         * where n = queries.length, m = parents.length</p>
+         * <p>Time Complexity: O(n * m)
+         * <br>
+         * Space Complexity: O(n);
+         * where n = queries.length, m = parents.length
+         *
          * @param parents array which stores parent node of each nodes
          * @param queries
          * @return maximum genetic difference for all queries

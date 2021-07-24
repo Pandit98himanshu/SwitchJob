@@ -6,12 +6,14 @@
 package leetcode;
 
 public class _MinimumFallingPathSumII {
+
     static class Solution {
         /**
          * <strong>Brute Force</strong> - Dynamic Programming
-         * <p>{@code Time Complexity: O(n * m * m)};
-         * where n = number of rows, m = number of columns</p>
-         * <p>{@code Space Complexity: O(1)}</p>
+         * <p>Time Complexity: O(n * m * m);
+         * where n = number of rows, m = number of columns
+         * <br>Space Complexity: O(1)
+         *
          * @param arr
          * @return minimum sum of a falling path with non-zero shifts.
          * @see MaximumNumberOfPointsWithCost
@@ -38,11 +40,12 @@ public class _MinimumFallingPathSumII {
         }
 
         /**
-         * <p><strong>Efficient Approach</strong></p>
-         * Copied from <a href=https://leetcode.com/problems/minimum-falling-path-sum-ii/discuss/1272688/O(N*N)-Time-c++-code>leetcode discuss</a>
-         * <p>{@code Time Complexity: };
-         * where n = number of rows, m = number of columns</p>
-         * <p>{@code Space Complexity: }</p>
+         * <strong>Efficient Approach</strong>
+         * <p>Copied from <a href=https://leetcode.com/problems/minimum-falling-path-sum-ii/discuss/1272688/O(N*N)-Time-c++-code>leetcode discuss</a>
+         * <p>Time Complexity: 😵‍💫;
+         * where n = number of rows, m = number of columns
+         * <br>Space Complexity: 😵‍💫
+         *
          * @param arr
          * @return minimum sum of a falling path with non-zero shifts.
          */

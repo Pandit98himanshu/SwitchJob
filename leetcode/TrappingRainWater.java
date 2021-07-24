@@ -8,8 +8,8 @@ package leetcode;
 public class TrappingRainWater {
     static class Solution {
         /**
-         * <p>{@code Time Complexity: O(n)}</p>
-         * <p>{@code Space Complexity: O(2 * n)}</p>
+         * <p>Time Complexity: O(n)
+         * <br>Space Complexity: O(2 * n)
          * @param height heights of walls
          * @return total water trapped between walls
          */

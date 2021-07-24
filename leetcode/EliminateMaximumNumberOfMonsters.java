@@ -15,7 +15,7 @@ class EliminateMaximumNumberOfMonsters {
             for (int i = 0; i < n; i++)
                 time[i] = (int)Math.ceil((1.0* dist[i]) / speed[i]);
 
-
+            // O(nlogn)
             Arrays.sort(time);
 
             for (int i = 0, t = 1; i < n; i++, t++)

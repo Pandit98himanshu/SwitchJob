@@ -8,6 +8,7 @@ package leetcode;
 import java.util.ArrayList;
 
 public class _ReverseNodesInKGroup {
+
     /**
      * Definition for singly-linked list.
      */
@@ -40,7 +41,7 @@ public class _ReverseNodesInKGroup {
             possibleHeads.add(head);
             boolean isAltered = false;
 
-            while(start != null) {
+            while (start != null) {
                 int len = 1;
                 // move last to kth node of the current group
                 while (last != null && len != k) {
@@ -75,8 +76,9 @@ public class _ReverseNodesInKGroup {
 
         /**
          * Reverse the nodes of a linked list k at a time.
+         *
          * @param head pointer to a first node of the linked list
-         * @param k group size
+         * @param k    group size
          */
         public ListNode reverseKGroup(ListNode head, int k) {
             if (head == null || k <= 1) return head;
@@ -101,7 +103,7 @@ public class _ReverseNodesInKGroup {
 
         /**
          * @param start head pointer
-         * @param size size of the group
+         * @param size  size of the group
          * @return last node in a group of size {@code size}
          */
         public ListNode group(ListNode start, int size) {
@@ -137,11 +139,11 @@ public class _ReverseNodesInKGroup {
 
     public static void main(String[] args) {
         ListNode head = new ListNode(1,
-                                new ListNode(2,
-                                        new ListNode(3,
-                                                new ListNode(4,
-                                                        new ListNode(5,
-                                                                new ListNode(6))))));
+                new ListNode(2,
+                        new ListNode(3,
+                                new ListNode(4,
+                                        new ListNode(5,
+                                                new ListNode(6))))));
 
         int k = 2;
         printLL(new Solution().reverseKGroup(head, k));

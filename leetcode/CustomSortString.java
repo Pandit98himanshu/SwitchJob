@@ -13,8 +13,8 @@ public class CustomSortString {
         /**
          * This methods finds 1st occurrence of char {@code c} in given char array {@code str}.
          * Here we used the technique of sorting an array according to the order defined by another array.
-         * <p>{@code Time Complexity: O(n + mlogn)}</p>
-         * <p>{@code Space Complexity: O(n)}; where n = str.length() and m = order.length()</p>
+         * <p>Time Complexity: O(n + mlogn)}
+         * <br>Space Complexity: O(n); where n = str.length() and m = order.length()</p>
          * @param str is given array in which char {@code c} has to be searched
          * @param c is the character whose 1st occurrence needs to be found
          * @return first occurrence of char {@code c}
@@ -67,8 +67,8 @@ public class CustomSortString {
         /**
          * Sort String {@code str} based on the order defined on String {@code order}.
          * Here we are using simple hashing.
-         * <p>{@code Time Complexity: O(max(m, n, 26))}</p>
-         * <p>{@code Space Complexity: O(max(n, 128)}; where n = str.length() and m = order.length()</p>
+         * <p>Time Complexity: O(max(m, n, 26))
+         * <br>Space Complexity: O(max(n, 128); where n = str.length() and m = order.length()</p>
          * @param order the string according to which {@code str} needs to be sorted
          * @param str the string to be sorted according to order defined in {@code order}
          * @return sorted string {@code str} as required

@@ -5,7 +5,7 @@
 
 package leetcode;
 
-class FurthestBuildingYouCanReach {
+class _FurthestBuildingYouCanReach {
     // Brute-Force
     static class Solution {
         public int furthestBuilding(int[] heights, int bricks, int ladders) {

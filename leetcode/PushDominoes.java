@@ -13,8 +13,8 @@ public class PushDominoes {
          * The basic idea is, domino will fell in that side where force is greater.
          * <strong>Considering right side as +ve and left as -ve.</strong>
          * <p>Similar to {@link leetcode.TrappingRainWater}</p>
-         * <p>{@code Time Complexity: O(n)}</p>
-         * <p>{@code Space Complexity: O(n)}</p>
+         * <p>Time Complexity: O(n)
+         * <br>Space Complexity: O(n)
          *
          * @param dominoes initial situation of dominoes
          * @return final state of dominoes after applying forces

@@ -10,8 +10,8 @@ class TwoSum {
     static class Solution {
         /**
          * <strong>Two pointer method</strong>
-         * <p>{@code Time Complexity: O(nlogn)}</p>
-         * <p>{@code Space Complexity: O(n)}</p>
+         * <p>Time Complexity: O(nlogn)
+         * <br>Space Complexity: O(n)
          * @param nums integer array
          * @param target needs to be achieved by adding 2 integers from {@code nums}
          * @return indices of the two numbers such that they add up to {@code target}
@@ -50,8 +50,8 @@ class TwoSum {
         }
         /**
          * <strong>Using HashMap</strong>
-         * <p>{@code Time Complexity: O(n)}</p>
-         * <p>{@code Space Complexity: O(n)}</p>
+         * <p>Time Complexity: O(n)
+         * <br>Space Complexity: O(n)
          * @param nums integer array
          * @param target needs to be achieved by adding 2 integers from {@code nums}
          * @return indices of the two numbers such that they add up to {@code target}

@@ -9,8 +9,8 @@ public class KthSmallestSubarraySum {
     static public class Solution {
         /**
          * Copied from <a href=https://leetcode.com/problems/kth-smallest-subarray-sum/discuss/1333116/Binary-Search-with-sliding-window-O(N-log-(max-min))-and-O(1)-space>leetcode discuss</a>
-         * <p>{@code Time Complexity: O(n*log(n^2)) = O(nlogn)}</p>
-         * <p>{@code Space Complexity: O(1)}</p>
+         * <p>Time Complexity: O(n*log(n<sup>2</sup>)) = O(nlogn)
+         * <br>Space Complexity: O(1)
          *
          * @param nums an integer array
          * @param k
@@ -30,9 +30,8 @@ public class KthSmallestSubarraySum {
         }
 
         /**
-         *
          * @param nums a numbers array in which operation is to be performed
-         * @param sum mid element
+         * @param sum  mid element
          * @return number of subarrays whose sum is less than or equal to given sum
          */
         private int predicate(int[] nums, int sum) {

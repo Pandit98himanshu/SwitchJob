@@ -21,8 +21,9 @@ public class FourSum {
         }
 
         /**
-         * <p>{@code Time Complexity: O(n^(k-1)}</p>
-         * <p>{@code Space Complexity: O(n)}</p>
+         * <p>Time Complexity: O(n^(k-1))
+         * <br>
+         * Space Complexity: O(n)
          *
          * @param nums   integer array
          * @param k      numbers to be selected from {@code nums}
@@ -33,14 +34,19 @@ public class FourSum {
          */
         public List<List<Integer>> kSum(int[] nums, int k, int target, int start, int end) {
             List<List<Integer>> result = new ArrayList<>();
-//            // edge cases
-//            if (start == end || nums[start] * k > target || target > nums[end - 1] * k)
-//                return result;
+            // if the sum of k smallest values is greater than target,
+            // or the sum of k largest values is smaller than target,
+            // then there are no k elements that sum to target
+            if (start == end || nums[start] * k > target || target > nums[end - 1] * k)
+                return result;
+
             if (k == 2)
                 return twoSum(nums, target, start, end);
 
             for (int i = start; i < end; i++) {
+                // we don't want duplicate results
                 if (i == start || nums[i - 1] != nums[i]) {
+                    // k-1 iterations using recursion 🤔
                     for (List<Integer> subset : kSum(nums, k - 1, target - nums[i], i + 1, end)) {
                         result.add(new ArrayList<>(Arrays.asList(nums[i])));
                         result.get(result.size() - 1).addAll(subset);
@@ -51,10 +57,10 @@ public class FourSum {
         }
 
         /**
-         * Similar to {@link TwoSum.Solution#twoSum1}
+         * Similar to {@link TwoSum.Solution#twoSum1(int[], int)}
          *
          * @param start lower bound of search range
-         * @param end   upper bound of search range (here it is {@code nums.length}
+         * @param end   upper bound of search range (here it is {@code nums.length})
          * @return unique pairs such that they add up to {@code target}
          */
         public List<List<Integer>> twoSum(int[] nums, int target, int start, int end) {

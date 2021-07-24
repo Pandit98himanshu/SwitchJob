@@ -10,9 +10,9 @@ public class MaximumNumberOfPointsWithCost {
         /**
          * <strong>Brute Force</strong> - Dynamic Programming
          * <p>Similar to {@link leetcode._MinimumFallingPathSumII}</p>
-         * <p>{@code Time Complexity: O(m * n * n)};
-         * where m = number of rows, n = number of columns</p>
-         * <p>{@code Space Complexity: O(1)}</p>
+         * <p>Time Complexity: O(m * n * n);
+         * where m = number of rows, n = number of columns
+         * <br>Space Complexity: O(1)
          *
          * @param points
          * @return maximum points can be earned moving from top to bottom
@@ -40,11 +40,11 @@ public class MaximumNumberOfPointsWithCost {
 
         /**
          * <strong>Efficient Approach</strong> - Dynamic Programming
-         * <p>Based on {@link leetcode.TrappingRainWater}, left sweep and right sweep to get maximum value for each index.</p>
-         * Copied from <a href=https://leetcode.com/problems/maximum-number-of-points-with-cost/discuss/1344948/Clean-Java>leetcode discuss</a>
-         * <p>{@code Time Complexity: O(m * n)}</p>
-         * <p>{@code Space Complexity: O(m * n)};
-         * where m = number of rows, n = number of columns</p>
+         * <p>Based on {@link leetcode.TrappingRainWater}, left sweep and right sweep to get maximum value for each index.
+         * <p>Copied from <a href=https://leetcode.com/problems/maximum-number-of-points-with-cost/discuss/1344948/Clean-Java>leetcode discuss</a>
+         * <p>Time Complexity: O(m * n)
+         * <br>Space Complexity: O(m * n);
+         * where m = number of rows, n = number of columns
          *
          * @param points
          * @return maximum points can be earned moving from top to bottom

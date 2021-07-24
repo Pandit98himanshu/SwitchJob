@@ -22,8 +22,8 @@ public class BinaryTreePruning {
 
     static class Solution {
         /**
-         * <p>{@code Time Complexity: O(n)}</p>
-         * <p>{@code Space Complexity: O(n)};
+         * <p>Time Complexity: O(n)
+         * <br>Space Complexity: O(n);
          *  where n = total number of nodes in binary tree</p>
          * @param root root node of binary tree
          * @return the same tree where every subtree

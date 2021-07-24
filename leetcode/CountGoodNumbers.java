@@ -8,7 +8,9 @@ import java.util.*;
 
 class CountGoodNumbers {
 	static class Solution {
-		/* Iterative Function to calculate (x^y) % p in O(log y) */
+		/**
+		 * Iterative Function to calculate (x^y) % p in O(log y)
+		 */
 		public long power(long x, long y, long p) {
 			long res = 1;
 
@@ -24,7 +26,9 @@ class CountGoodNumbers {
 			}
 			return res;
 		}
-		/* Returns (a * b) % mod */
+		/**
+		 *  @returns (a * b) % mod
+		 */
 		public int moduloMultiplication(long a, long b, long mod) {
 			long res = 1;
 
