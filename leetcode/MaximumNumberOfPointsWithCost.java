@@ -9,7 +9,7 @@ public class MaximumNumberOfPointsWithCost {
     static class Solution {
         /**
          * <strong>Brute Force</strong> - Dynamic Programming
-         * <p>Similar to {@link leetcode._MinimumFallingPathSumII}</p>
+         * <p>Similar to {@link __MinimumFallingPathSumII}</p>
          * <p>Time Complexity: O(m * n * n);
          * where m = number of rows, n = number of columns
          * <br>Space Complexity: O(1)

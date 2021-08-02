@@ -1,0 +1,18 @@
+
+Number of integral points b/w 2 points
+–> https://www.geeksforgeeks.org/number-integral-points-two-points/
+6. Sum of all common divisors of x and y :–
+–> Calculate the GCD of given 2 nos. then find sum of divisors of that GCD.
+https://www.geeksforgeeks.org/sum-of-common-divisors-of-two-numbers-a-and-b/
+7. Sum of product of all possible subsets of a given set = –1 + ∏ (1 + elements of subset)
+8. Number of odd elements in nth row of pascal’s triangle = 2 ^ (no. of 1’s in its binary representation)
+9. Grid n x m with k cells must be included in path = https://www.hackerearth.com/practice/math/combinatorics/basics-of-combinatorics/practice-problems/algorithm/k-special-cells-93550252/editorial/
+10. (i = 0 to n) ∑(nCi * x^i) = (x + 1)^n
+src : www.hackerearth.com/problem/algorithm/power-set-game-3/editorial/?scroll-id=comments-298-335&scroll-trigger=inview#c158879
+src : https://qr.ae/pNKOS8
+11. https://www.geeksforgeeks.org/combinations-with-repetitions/
+12. Dealing with modulus : https://stackoverflow.com/a/31735393
+13. Find nCr efficiently :  https://stackoverflow.com/a/11809815
+14. Use this to remove duplicates from an array
+import java.util.stream.*;
+int[] a = IntStream.of(arr).distinct().toArray();

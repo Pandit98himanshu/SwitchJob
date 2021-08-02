@@ -5,7 +5,7 @@
 
 package leetcode;
 
-public class _MinimumFallingPathSumII {
+public class __MinimumFallingPathSumII {
 
     static class Solution {
         /**
