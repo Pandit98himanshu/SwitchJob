@@ -25,12 +25,21 @@ class TwoSum {
                 duplicateNums[i][1] = i;
             }
             // sort "duplicateNums" array based on 1st column
+
+/*
+            // Using Comparator interface
             Arrays.sort(duplicateNums, new Comparator<int[]>() {
+
                 @Override
                 public int compare(int[] o1, int[] o2) {
                     return Integer.compare(o1[0], o2[0]);
                 }
             });
+
+            // Using lambda
+            Arrays.sort(duplicateNums, (int[] o1, int[] o2) -> Integer.compare(o1[0], o2[0]));
+*/
+            Arrays.sort(duplicateNums, Comparator.comparingInt((int[] o) -> o[0]));
 
             int l = 0, r = n-1;
             int[] result = new int[2];         // store result
