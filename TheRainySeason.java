@@ -6,7 +6,6 @@
 import java.util.Arrays;
 
 public class TheRainySeason {
-    static class TestClass {
         /**
          * Depth first search
          */
@@ -59,17 +58,8 @@ public class TheRainySeason {
 
             return ans;
         }
-    }
 
     private static void print(Object... O) {
         System.out.println(Arrays.deepToString(O));
-    }
-
-    public static void main(String[] args) {
-        char[][] island = {{'.', '*', '*', '.'},
-                {'*', '.', '*', '.'},
-                {'*', '.', '.', '*'},
-                {'*', '*', '*', '*'}};
-        print(new TestClass().trappedWater(island));
     }
 }
