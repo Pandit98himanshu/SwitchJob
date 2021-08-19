@@ -64,7 +64,7 @@ public class MaximumNumberOfPointsWithCost {
             long[][] dp = new long[m][n];
             // we've to use deep copy here 'cause Arrays.copyOf(), .clone(), etc. doesn't work
             for (int i = 0; i < m; i++)
-                for (int j = 0 ; j < n; j++)
+                for (int j = 0; j < n; j++)
                     dp[i][j] = points[i][j];
 
             for (int i = 1; i < m; i++) {

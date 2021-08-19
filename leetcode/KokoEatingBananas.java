@@ -24,7 +24,7 @@ public class KokoEatingBananas {
             int time = 0;
             for (int bananas : piles) {
                 time += (bananas - 1) / k + 1;  // we could use Math.ceil(bananas / (k * 1d));
-                                                // but it takes a lot of runtime
+                // but it takes a lot of runtime
             }
             return time;
         }

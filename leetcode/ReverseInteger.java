@@ -19,13 +19,12 @@ class ReverseInteger {
             int ans = 0;
             try {
                 ans = Integer.parseInt(sb.toString());
-            }
-            catch (Exception e) {
+            } catch (Exception e) {
                 ans = 0;
             }
 
             if (x < 0) {
-                return -1*ans;
+                return -1 * ans;
             }
             return ans;
         }

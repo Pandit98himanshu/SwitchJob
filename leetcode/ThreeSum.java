@@ -11,6 +11,7 @@ public class ThreeSum {
     static class Solution {
         /**
          * Copied from <a href=https://leetcode.com/problems/3sum/discuss/1182773/Java-Solution-with-HashSet>leetcode discuss</a>
+         *
          * @param nums an integer array
          * @return list of distinct triplets which adds up to zero
          */
@@ -27,9 +28,9 @@ public class ThreeSum {
                     if (sum == 0) {
                         List<Integer> list = Arrays.asList(nums[i], nums[l], nums[r]);
                         ans.add(list);
-                        l++; r--;
-                    }
-                    else if (sum < 0)
+                        l++;
+                        r--;
+                    } else if (sum < 0)
                         l++;
                     else
                         r--;

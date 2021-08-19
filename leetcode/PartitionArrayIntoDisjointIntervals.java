@@ -19,16 +19,16 @@ public class PartitionArrayIntoDisjointIntervals {
                 if (max1 > nums[i]) {
                     max1 = max2;
                     ans = i;
-                }
-                else {
+                } else {
                     max2 = Math.max(max2, nums[i]);
                 }
             }
-            return ans+1;
+            return ans + 1;
         }
 
         /**
          * Similar to {@link leetcode.TrappingRainWater}
+         *
          * @param nums integer array needs to be divided into 2 parts i.e., {@code left} and {@code right},
          *             where every element in {@code left} <= {@code right}, while keeping {@code left.length} minimum.
          * @return length of left after partitioning
@@ -61,10 +61,10 @@ public class PartitionArrayIntoDisjointIntervals {
             // I WAS 98% CLOSER TO THE SOLUTION
             // copied from https://leetcode.com/problems/partition-array-into-disjoint-intervals/discuss/1355919/Java-2-easy-solutions-explained
             int i = 0;
-            while (i < n-1 && maxLeftSwipe[i] > minRightSwipe[i+1]) {
+            while (i < n - 1 && maxLeftSwipe[i] > minRightSwipe[i + 1]) {
                 i++;
             }
-            return i+1;     // answer is in 1-indexing
+            return i + 1;     // answer is in 1-indexing
         }
 
         /**
@@ -111,11 +111,13 @@ public class PartitionArrayIntoDisjointIntervals {
             return ans + 1;
         }
     }
-    private static void print(Object...O) {
+
+    private static void print(Object... O) {
         System.out.println(Arrays.deepToString(O));
     }
+
     public static void main(String[] args) {
-        int[] nums = {90,47,69,10,43,92,31,73,61,97}; /*{32,57,24,19,0,24,49,67,87,87}; /*{26,51,40,58,42,76,30,48,79,91}; /* */
+        int[] nums = {90, 47, 69, 10, 43, 92, 31, 73, 61, 97}; /*{32,57,24,19,0,24,49,67,87,87}; /*{26,51,40,58,42,76,30,48,79,91}; /* */
 
         System.out.println(new Solution().partitionDisjoint1(nums));
     }

@@ -1,7 +1,7 @@
 /*
  * 922. Sort Array By Parity II
  * https://leetcode.com/problems/sort-array-by-parity-ii/
- * 
+ *
  * Solved in-place(without using any extra space)
  */
 
@@ -21,8 +21,7 @@ class SortArrayByParityII {
                     nums[y] = temp;
                     x += 2;
                     y += 2;
-                }
-                else {
+                } else {
                     if (evenPlace == 0)
                         x += 2;
                     if (oddPlace == 0)
@@ -34,7 +33,7 @@ class SortArrayByParityII {
     }
 
     public static void main(String[] args) {
-        int[] nums = {2,3,1,1,4,0,0,4,3,3};
+        int[] nums = {2, 3, 1, 1, 4, 0, 0, 4, 3, 3};
         int[] res = new Solution().sortArrayByParityII(nums);
         for (int i : res)
             System.out.print(i + ", ");

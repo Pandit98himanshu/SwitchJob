@@ -15,28 +15,29 @@ public class CustomSortString {
          * Here we used the technique of sorting an array according to the order defined by another array.
          * <p>Time Complexity: O(n + mlogn)}
          * <br>Space Complexity: O(n); where n = str.length() and m = order.length()</p>
+         *
          * @param str is given array in which char {@code c} has to be searched
-         * @param c is the character whose 1st occurrence needs to be found
+         * @param c   is the character whose 1st occurrence needs to be found
          * @return first occurrence of char {@code c}
          */
-        public int firstOccurrence (char[] str, char c) {
-            int l = 0, r = str.length-1, mid, result = -1;
+        public int firstOccurrence(char[] str, char c) {
+            int l = 0, r = str.length - 1, mid, result = -1;
             while (l <= r) {
-                mid = l+(r-l)/2;
-                if ((mid == 0 || str[mid-1] < c) && str[mid] == c) {
+                mid = l + (r - l) / 2;
+                if ((mid == 0 || str[mid - 1] < c) && str[mid] == c) {
                     result = mid;
                     break;
-                }
-                else if (str[mid] < c)
-                    l = mid+1;
+                } else if (str[mid] < c)
+                    l = mid + 1;
                 else
-                    r = mid-1;
+                    r = mid - 1;
             }
             return result;
         }
+
         public String customSortString(String order, String str) {
             int n = str.length();                       // find length of string
-            char[] strChar =  str.toCharArray();        // convert str to char array
+            char[] strChar = str.toCharArray();        // convert str to char array
 
             char[] strCharSorted = str.toCharArray();   // sorted str will be stored here
             boolean[] visited = new boolean[n];         // we'll mark every visited element element as true
@@ -62,6 +63,7 @@ public class CustomSortString {
             return new String(strChar);
         }
     }
+
     // Most efficient
     static class Solution {
         /**
@@ -69,8 +71,9 @@ public class CustomSortString {
          * Here we are using simple hashing.
          * <p>Time Complexity: O(max(m, n, 26))
          * <br>Space Complexity: O(max(n, 128); where n = str.length() and m = order.length()</p>
+         *
          * @param order the string according to which {@code str} needs to be sorted
-         * @param str the string to be sorted according to order defined in {@code order}
+         * @param str   the string to be sorted according to order defined in {@code order}
          * @return sorted string {@code str} as required
          */
         public String customSortString(String order, String str) {
@@ -95,6 +98,7 @@ public class CustomSortString {
             return sb.toString();
         }
     }
+
     public static void main(String[] args) {
         String order = "kqep", str = "pekeq";
 

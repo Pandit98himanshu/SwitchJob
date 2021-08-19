@@ -41,9 +41,9 @@ public class _RankTransformOfAMatrix {
             ArrayList<Pair> posList = e.getValue();
 
             // For Debugging
-                System.out.print(value + " : ");
-                posList.forEach(i -> System.out.print("(" + i.x + "," + i.y + "), "));
-                System.out.println();
+            System.out.print(value + " : ");
+            posList.forEach(i -> System.out.print("(" + i.x + "," + i.y + "), "));
+            System.out.println();
 
             int maxRank;
             for (Pair pos : posList) {

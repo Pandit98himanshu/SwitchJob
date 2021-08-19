@@ -28,6 +28,7 @@ public class MapSumPairs_Trie {
         }
 
         TrieNode trie;
+
         public MapSum() {
             trie = new TrieNode();
         }
@@ -44,9 +45,9 @@ public class MapSumPairs_Trie {
     public static void main(String[] args) {
         MapSum obj = new MapSum();
 
-        obj.insert("apple",3);
+        obj.insert("apple", 3);
         System.out.println(obj.sum("ap"));
-        obj.insert("app",2);
+        obj.insert("app", 2);
         System.out.println(obj.sum("app"));
     }
 }

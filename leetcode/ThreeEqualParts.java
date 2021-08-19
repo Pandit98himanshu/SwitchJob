@@ -23,6 +23,7 @@ public class ThreeEqualParts {
             }
             return result;
         }
+
         public int[] threeEqualParts(int[] arr) {
             int n = arr.length;
             int[] prefixSum = arr.clone();
@@ -81,7 +82,7 @@ public class ThreeEqualParts {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1,1,0,0,1};
+        int[] arr = {1, 1, 0, 0, 1};
         print(new Solution().threeEqualParts(arr));
     }
 }

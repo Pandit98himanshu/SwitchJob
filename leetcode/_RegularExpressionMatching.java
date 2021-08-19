@@ -14,9 +14,8 @@ class _RegularExpressionMatching {
 
             // p = ""
             if (pat.length == 0) {
-                if (str.length == 0)        // s = ""
-                    return true;
-                return false;
+                // s = ""
+                return str.length == 0;
             }
             // s = ""
             else if (str.length == 0) {
@@ -24,9 +23,7 @@ class _RegularExpressionMatching {
                     if (pat[idx] != '*')    // p = "ab*c*"
                         return false;
                 }
-            }
-
-            else {
+            } else {
                 int i = 0, j = 0;
                 int count_str = 0, count_pat = 0;
                 while (true) {
@@ -45,8 +42,7 @@ class _RegularExpressionMatching {
                                 i++;
                                 count_str++;
                             }
-                        }
-                        else {
+                        } else {
                             i++;
                         }
                     }

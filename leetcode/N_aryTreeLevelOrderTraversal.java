@@ -24,7 +24,7 @@ public class N_aryTreeLevelOrderTraversal {
         }
     }
 
-    private static List<List<Integer>> ans = new ArrayList<>();
+    private static final List<List<Integer>> ans = new ArrayList<>();
 
     static {
         for (int i = 0; i < 1005; i++) {
@@ -72,8 +72,8 @@ public class N_aryTreeLevelOrderTraversal {
                 Arrays.asList(new Node(2), new Node(3,
                         Arrays.asList(new Node(6), new Node(7,
                                 Arrays.asList(new Node(11, Arrays.asList(new Node(14))))))), new Node(4,
-                                Arrays.asList(new Node(8, Arrays.asList(new Node(12))))), new Node(5,
-                                Arrays.asList(new Node(9, Arrays.asList(new Node(13))), new Node(10)))));
+                        Arrays.asList(new Node(8, Arrays.asList(new Node(12))))), new Node(5,
+                        Arrays.asList(new Node(9, Arrays.asList(new Node(13))), new Node(10)))));
         print(new N_aryTreeLevelOrderTraversal().levelOrder(root));
     }
 }

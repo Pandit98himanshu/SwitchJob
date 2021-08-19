@@ -4,11 +4,11 @@
 
 package DisjointSet;
 
-public class QuickFind {
+public class QuickFind implements DisjointSet {
     int[] root;
 
     /**
-     * Time Complexity: O(n); where n = number of nodes
+     * <p>Time Complexity: O(n); where n = number of nodes
      * @param size length of disjoint set data structure
      */
     public QuickFind(int size) {
@@ -18,7 +18,7 @@ public class QuickFind {
     }
 
     /**
-     * Time Complexity: O(1)
+     * <p>Time Complexity: O(1)
      * @return root node of x
      */
     public int find(int x) {
@@ -26,8 +26,8 @@ public class QuickFind {
     }
 
     /**
-     * Time Complexity: O(n); where n = number of nodes
-     * Union sets having {@code x} and having {@code y}
+     * <p>Time Complexity: O(n); where n = number of nodes
+     * <p>Union sets having {@code x} and having {@code y}
      * and makes root of {@code x} as root of both sets
      */
     public void union(int x, int y) {
@@ -42,7 +42,7 @@ public class QuickFind {
     }
 
     /**
-     * Time Complexity: O(1)
+     * <p>Time Complexity: O(1)
      * @return whether node {@code x} and node {@code y} are connected
      */
     public boolean areConnected(int x, int y) {

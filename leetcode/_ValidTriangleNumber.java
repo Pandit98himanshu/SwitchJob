@@ -55,7 +55,7 @@ public class _ValidTriangleNumber {
                 for (int i = 0; i < n - 2; i++) {
                     for (int j = i + 1; j < n - 1; j++) {
                         int index = lower_bound(nums, j + 1, n, nums[i] + nums[j]);
-                        if (nums[index] < nums[i]+nums[j])
+                        if (nums[index] < nums[i] + nums[j])
                             countTriplets += index - j + 1;
                     }
                 }

@@ -15,11 +15,12 @@ class RemoveAllAdjacentDuplicatesInStringII {
             char c;
             int count;
 
-            Pair (char c, int count) {
+            Pair(char c, int count) {
                 this.c = c;
                 this.count = count;
             }
         }
+
         public String removeDuplicates(String s, int k) {
             // final answer will be stored here
             StringBuilder duplicatesRemoved = new StringBuilder();

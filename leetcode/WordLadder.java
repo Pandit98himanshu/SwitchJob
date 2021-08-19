@@ -22,7 +22,7 @@ public class WordLadder {
      * <strong>Using Bi-directional BFS</strong>
      */
     private int L;
-    private Map<String, List<String>> allComboDict;
+    private final Map<String, List<String>> allComboDict;
 
     {
         this.L = 0;

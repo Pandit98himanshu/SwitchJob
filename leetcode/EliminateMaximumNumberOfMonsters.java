@@ -13,7 +13,7 @@ class EliminateMaximumNumberOfMonsters {
             int[] time = new int[n];        // time when each monster reaches the city
 
             for (int i = 0; i < n; i++)
-                time[i] = (int)Math.ceil((1.0* dist[i]) / speed[i]);
+                time[i] = (int) Math.ceil((1.0 * dist[i]) / speed[i]);
 
             // O(nlogn)
             Arrays.sort(time);
@@ -29,7 +29,7 @@ class EliminateMaximumNumberOfMonsters {
     }
 
     public static void main(String[] args) {
-        int[] dist = {3,5,7,4,5}, speed = {2,3,6,3,2};
+        int[] dist = {3, 5, 7, 4, 5}, speed = {2, 3, 6, 3, 2};
 
         System.out.println(new Solution().eliminateMaximum(dist, speed));
     }

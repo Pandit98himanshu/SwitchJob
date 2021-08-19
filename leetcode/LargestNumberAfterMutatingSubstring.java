@@ -11,7 +11,8 @@ public class LargestNumberAfterMutatingSubstring {
         /**
          * Mutates any substring of num (i.e. replace num[i] with change[num[i]])
          * if (num[i] < change[num[i]])
-         * @param num a large integer value wrapped in String
+         *
+         * @param num    a large integer value wrapped in String
          * @param change corresponding changing values
          * @return a string representing the largest possible integer
          * after mutating (or choosing not to) any substring of num

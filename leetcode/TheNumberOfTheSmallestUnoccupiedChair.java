@@ -13,7 +13,8 @@ public class TheNumberOfTheSmallestUnoccupiedChair {
      * Copied from <a href=https://leetcode.com/problems/the-number-of-the-smallest-unoccupied-chair/discuss/1359790/C++-Set-+-Priority-Queue-or-Commented/1022805>leetcode discuss comment</a>
      * <p>Time Complexity: O(n)
      * <br>Space Complexity: O(n); where n = times.length
-     * @param times arrival and leaving times of the ith friend
+     *
+     * @param times        arrival and leaving times of the ith friend
      * @param targetFriend
      * @return the chair number that the friend numbered targetFriend will sit on
      */

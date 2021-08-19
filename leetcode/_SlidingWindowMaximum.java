@@ -11,6 +11,7 @@ class _SlidingWindowMaximum {
         /**
          * <strong>Using Sliding Window Technique</strong>
          * <p>Time Complexity: O(n)
+         *
          * @param nums
          * @param k
          * @return
@@ -37,6 +38,7 @@ class _SlidingWindowMaximum {
         /**
          * <strong>Using Heap (Priority Queue)</strong>
          * <p>Time Complexity: O(nklogk)
+         *
          * @param
          * @return
          */

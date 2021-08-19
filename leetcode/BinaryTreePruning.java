@@ -13,6 +13,7 @@ public class BinaryTreePruning {
         int val;
         TreeNode left;
         TreeNode right;
+
         TreeNode(int val) {
             this.val = val;
             this.left = null;
@@ -24,7 +25,8 @@ public class BinaryTreePruning {
         /**
          * <p>Time Complexity: O(n)
          * <br>Space Complexity: O(n);
-         *  where n = total number of nodes in binary tree</p>
+         * where n = total number of nodes in binary tree</p>
+         *
          * @param root root node of binary tree
          * @return the same tree where every subtree
          * (of the given tree) not containing a 1 has been removed
@@ -32,8 +34,10 @@ public class BinaryTreePruning {
         public TreeNode pruneTree(TreeNode root) {
             return prune(root);
         }
+
         /**
          * Helper function
+         *
          * @return pruned binary tree
          */
         public TreeNode prune(TreeNode node) {
@@ -63,6 +67,7 @@ public class BinaryTreePruning {
             }
             return root;
         }
+
         public boolean contains1(TreeNode root) {
             if (root == null) return false;
             if (root.val == 1) return true;

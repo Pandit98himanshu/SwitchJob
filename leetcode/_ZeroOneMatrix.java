@@ -18,6 +18,7 @@ public class _ZeroOneMatrix {
 
             return new int[][]{};
         }
+
         /**
          * <strong>Using BFS</strong>
          */
@@ -44,9 +45,8 @@ public class _ZeroOneMatrix {
                     if (mat[i][j] == 0) {
                         res[i][j] = 0;
                         q.add(new Pair(i, j));          // add all zero positions into queue,
-                                                        // so that we can start BFS operation from that cell
-                    }
-                    else {
+                        // so that we can start BFS operation from that cell
+                    } else {
                         res[i][j] = Integer.MAX_VALUE;  // if it is not zero, mark it as infinite
                     }
                 }
@@ -56,7 +56,7 @@ public class _ZeroOneMatrix {
                 Pair curr = q.poll();
                 int[][] moves = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
                 for (int i = 0; i < 4; i++) {
-                    int nextRow = curr.x + moves[i][0], nextCol = curr.y+moves[i][1];
+                    int nextRow = curr.x + moves[i][0], nextCol = curr.y + moves[i][1];
                     if (nextRow >= 0 && nextCol >= 0 && nextRow < rows && nextCol < cols) {
                         if (res[nextRow][nextCol] > res[curr.x][curr.y] + 1) {
                             res[nextRow][nextCol] = res[curr.x][curr.y] + 1;
@@ -70,11 +70,12 @@ public class _ZeroOneMatrix {
         }
     }
 
-    public static void print(Object...O) {
+    public static void print(Object... O) {
         System.out.println(Arrays.deepToString(O));
     }
+
     public static void main(String[] args) {
-        int[][] mat = {{0,0,0},{0,1,0},{1,1,1}};
+        int[][] mat = {{0, 0, 0}, {0, 1, 0}, {1, 1, 1}};
         print(new Solution().updateMatrix(mat));
     }
 }
