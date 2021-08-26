@@ -3,3 +3,6 @@ Questions for switching the tech job.
 
 ## Disclaimer:
 Any file starts with _ (underscore) is either brute force or incomplete and will be taken care of, later.
+
+###Want to practice for coding interview with me?
+Ping me in Telegram @himanshu_82 or Gmail pandit98himanshu@gmail.com
