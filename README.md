@@ -1,9 +1,5 @@
 # SwitchJob
-<p align="center">
-  Solutions to problems for switching the tech job. <img src="https://user-images.githubusercontent.com/34882878/130913521-4b23d603-a919-4b26-a9d7-fc32377c690a.png" width="200">
-</p>
-
-
+Solutions to problems for switching the tech job. <img src="https://user-images.githubusercontent.com/34882878/130913521-4b23d603-a919-4b26-a9d7-fc32377c690a.png" width="200" align="center">
 
 ## Disclaimer:
 Any file starts with _ (underscore) is either brute force or incomplete and will be taken care of, later.
