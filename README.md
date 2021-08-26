@@ -4,8 +4,8 @@ Solutions to problems for switching the tech job.
 ## Disclaimer:
 Any file starts with _ (underscore) is either brute force or incomplete and will be taken care of, later.
 
-#
+# Practice makes a man/women/others :wink: perfect!
 **Want to practice for coding interview with me?**  
-Ping me in  
+Ping me  
 [Telegram](https://telegram.org) : @himanshu_82  
 [Gmail](https://www.google.com/intl/en-GB/gmail/about/#) : pandit98himanshu@gmail.com
