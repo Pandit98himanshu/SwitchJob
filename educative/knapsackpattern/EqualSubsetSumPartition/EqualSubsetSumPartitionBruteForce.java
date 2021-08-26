@@ -2,7 +2,7 @@
  * Equal Subset Sum Partition - Brute Force
  */
 
-package educative.KnapsackPattern.EqualSubsetSumPartition;
+package educative.knapsackpattern.EqualSubsetSumPartition;
 
 class PartitionSet {
 

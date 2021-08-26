@@ -1,3 +1,5 @@
+package algorithms;
+
 import java.util.*;
 
 public class TopologicalSorting {
@@ -27,7 +29,10 @@ public class TopologicalSorting {
         return result;
     }
 
-    private void topologicalSortUtil(List<Integer>[] adjList, Stack<Integer> stk, boolean[] visited, int i) {
+    private void topologicalSortUtil(List<Integer>[] adjList,
+                                     Stack<Integer> stk,
+                                     boolean[] visited,
+                                     int i) {
         // visit all nodes which are adjacent to the current node
         if (adjList[i] != null) {
             for (int x : adjList[i])
@@ -38,18 +43,27 @@ public class TopologicalSorting {
         visited[i] = true;  // make current vertex visited, so that we'll not visit it again
     }
 
-    public static void main(String[] args) throws Exception {
-        int n = 6;
-        int[][] arr = {{5, 2}, {5, 0}, {4, 0}, {4, 1}, {2, 3}, {3, 1}};
-        // create adjacency list from given array "arr"
-        List<Integer>[] adjList = new ArrayList[n];
-        for (int i = 0; i < n; i++) {
-            List<Integer> list = adjList[arr[i][0]];
+    /**
+     * @return adjacency list from given array "directedEdges"
+     */
+    private List<Integer>[] createAdjacencyList(int[][] directedEdges, int vertices) {
+        List<Integer>[] adjList = new ArrayList[vertices];
+        for (int i = 0; i < vertices; i++) {
+            List<Integer> list = adjList[directedEdges[i][0]];
             if (list == null)
                 list = new ArrayList<>();
-            list.add(arr[i][1]);
-            adjList[arr[i][0]] = list;
+            list.add(directedEdges[i][1]);
+            adjList[directedEdges[i][0]] = list;
         }
-        System.out.println(new TopologicalSorting().topologicalSort(adjList));
+        return adjList;
+    }
+
+    public static void main(String[] args) throws Exception {
+        int n = 6;
+        int[][] graph = {{5, 2}, {5, 0}, {4, 0}, {4, 1}, {2, 3}, {3, 1}};
+        TopologicalSorting obj = new TopologicalSorting();
+
+        List<Integer>[] adjList = obj.createAdjacencyList(graph, n);
+        System.out.println(obj.topologicalSort(adjList));
     }
 }

@@ -2,7 +2,7 @@
  * Minimum Subset Sum Difference - Brute Force
  */
 
-package educative.KnapsackPattern.MinimumSubsetSumDifference;
+package educative.knapsackpattern.MinimumSubsetSumDifference;
 
 class PartitionSet {
 

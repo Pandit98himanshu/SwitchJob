@@ -1,7 +1,7 @@
 /*
  * Top-Down approach for Knapsack DP problem
  */
-package educative.KnapsackPattern.Knapsack;
+package educative.knapsackpattern.Knapsack;
 
 class TopDownKnapsack {
 	public int solveKnapsack(int[] profits, int[] weights, int capacity) {

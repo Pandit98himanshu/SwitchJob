@@ -1,7 +1,7 @@
 /*
  * Equal Subset Sum Partition : (0/1 Knapsack [Top-down approach])
  */
-package educative.KnapsackPattern.EqualSubsetSumPartition;
+package educative.knapsackpattern.EqualSubsetSumPartition;
 
 class EqualSubsetSumPartitionTopDown {
     // method to find sum of an array

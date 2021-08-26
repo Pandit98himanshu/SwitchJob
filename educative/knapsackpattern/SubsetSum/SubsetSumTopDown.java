@@ -2,7 +2,7 @@
  * Subset Sum : (0/1 Knapsack [Top-down approach])
  */
 
-package educative.KnapsackPattern.SubsetSum;
+package educative.knapsackpattern.SubsetSum;
 
 class SubsetSumTopDown {
     // method to find sum of an array

@@ -2,22 +2,25 @@
  * Union-Find Data Structure
  */
 
-package DisjointSet;
+package datastructure.disjointset;
 
 /**
- * More efficient than {@link QuickFind}
+ * More efficient than {@link QuickFind} & {@link QuickUnion}
  */
-public class QuickUnion implements DisjointSet {
+public class UnionByRank implements DisjointSet {
     int[] root;
-
+    int[] rank;         // height of each vertex
     /**
      * <p>Time Complexity: O(n); where n = number of nodes
      * @param size length of disjoint set data structure
      */
-    public QuickUnion(int size) {
+    public UnionByRank(int size) {
         root = new int[size];
-        for (int i = 0; i < size; i++)
+        rank = new int[size];
+        for (int i = 0; i < size; i++) {
             root[i] = i;
+            rank[i] = 1;
+        }
     }
 
     /**
@@ -33,16 +36,24 @@ public class QuickUnion implements DisjointSet {
 
     /**
      * <p>Time Complexity: O(log(n)); where n = number of nodes
-     * Union sets having {@code x} and having {@code y}
-     * and makes root of {@code x} as root of both sets
+     * Union sets having node {@code x} and node {@code y}
+     * and makes root based on the height of the tree i.e., by rank
      */
     public void union(int x, int y) {
         int rootX = find(x);
         int rootY = find(y);
         if (rootX == rootY)
             return;
-
-        root[rootY] = rootX;
+        // make root which has larger length
+        // because by this method our tree will not become a line graph
+        if (rank[rootX] < rank[rootY])
+            root[rootX] = rootY;
+        else if (rank[rootY] < rank[rootX])
+            root[rootY] = rootX;
+        else {
+            root[rootY] = rootX;
+            rank[rootX]++;
+        }
     }
 
     /**
@@ -54,7 +65,7 @@ public class QuickUnion implements DisjointSet {
     }
 
     public static void main(String[] args) {
-        QuickUnion qu = new QuickUnion(10);
+        UnionByRank qu = new UnionByRank(10);
 
         // 1-2-5-6-7 3-8-9 4
         qu.union(1, 2);

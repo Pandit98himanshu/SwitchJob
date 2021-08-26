@@ -1,6 +1,8 @@
+package algorithms;
+
 /**
  * Date 31/08/2019
- * <p>Doing substring matching in given string using KMP Algorithm
+ * <p>Doing substring matching in given string using algorithms.KMP Algorithm
  * <p>Time complexity = O(str.length + pattern.length)
  * <br>Space complexity = O(pattern.length)
  *

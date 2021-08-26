@@ -2,7 +2,7 @@
  * Subset Sum - Brute Force
  */
 
-package educative.KnapsackPattern.SubsetSum;
+package educative.knapsackpattern.SubsetSum;
 
 class PartitionSet {
 

@@ -1,3 +1,5 @@
+package datastructure;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -6,8 +8,8 @@ import java.util.Map;
 
 public class Graph<T>{
 
-    private List<Edge<T>> allEdges;
-    private Map<Long,Vertex<T>> allVertex;
+    private final List<Edge<T>> allEdges;
+    private final Map<Long,Vertex<T>> allVertex;
     boolean isDirected = false;
     
     public Graph(boolean isDirected){
@@ -27,9 +29,7 @@ public class Graph<T>{
             return;
         }
         allVertex.put(vertex.getId(), vertex);
-        for(Edge<T> edge : vertex.getEdges()){
-            allEdges.add(edge);
-        }
+        allEdges.addAll(vertex.getEdges());
     }
     
     public Vertex<T> addSingleVertex(long id){
@@ -86,9 +86,11 @@ public class Graph<T>{
 
     @Override
     public String toString(){
-        StringBuffer buffer = new StringBuffer();
+        StringBuilder buffer = new StringBuilder();
         for(Edge<T> edge : getAllEdges()){
-            buffer.append(edge.getVertex1() + " " + edge.getVertex2() + " " + edge.getWeight());
+            buffer.append(edge.getVertex1()).append(" ")
+                    .append(edge.getVertex2()).append(" ")
+                    .append(edge.getWeight());
             buffer.append("\n");
         }
         return buffer.toString();
@@ -99,8 +101,8 @@ public class Graph<T>{
 class Vertex<T> {
     long id;
     private T data;
-    private List<Edge<T>> edges = new ArrayList<>();
-    private List<Vertex<T>> adjacentVertex = new ArrayList<>();
+    private final List<Edge<T>> edges = new ArrayList<>();
+    private final List<Vertex<T>> adjacentVertex = new ArrayList<>();
     
     Vertex(long id){
         this.id = id;
@@ -164,8 +166,8 @@ class Vertex<T> {
 
 class Edge<T>{
     private boolean isDirected = false;
-    private Vertex<T> vertex1;
-    private Vertex<T> vertex2;
+    private final Vertex<T> vertex1;
+    private final Vertex<T> vertex2;
     private int weight;
     
     Edge(Vertex<T> vertex1, Vertex<T> vertex2){
@@ -235,7 +237,7 @@ class Edge<T>{
 
     @Override
     public String toString() {
-        return "Edge [isDirected=" + isDirected + ", vertex1=" + vertex1
+        return "datastructure.disjointset.Edge [isDirected=" + isDirected + ", vertex1=" + vertex1
                 + ", vertex2=" + vertex2 + ", weight=" + weight + "]";
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Equal Subset Sum Partition : (0/1 Knapsack [Bottom-up approach])
  */
-package educative.KnapsackPattern.EqualSubsetSumPartition;
+package educative.knapsackpattern.EqualSubsetSumPartition;
 
 class EqualSubsetSumPartitionBottomUp {
 	public static int sumArray (int[] arr) {

@@ -5,7 +5,7 @@
 
 package leetcode;
 
-import DisjointSet.OptimizedDisjointSet;
+import datastructure.disjointset.OptimizedDisjointSet;
 
 public class NumberOfProvinces {
     /**

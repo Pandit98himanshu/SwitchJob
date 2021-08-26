@@ -2,7 +2,7 @@
  * Subset Sum : (0/1 Knapsack [Bottom-up approach])
  */
 
-package educative.KnapsackPattern.MinimumSubsetSumDifference;
+package educative.knapsackpattern.MinimumSubsetSumDifference;
 
 class _MinimumSubsetSumDifferenceBottomUp {
     public static int sumArray(int[] arr) {

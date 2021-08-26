@@ -2,19 +2,19 @@
  * Union-Find Data Structure
  */
 
-package DisjointSet;
+package datastructure.disjointset;
 
 /**
- * More efficient than {@link QuickFind} & {@link QuickUnion}
+ * More efficient than {@link QuickFind}, {@link QuickUnion} & {@link UnionByRank}
  */
-public class UnionByRank implements DisjointSet {
-    int[] root;
-    int[] rank;         // height of each vertex
+public class OptimizedDisjointSet implements DisjointSet {
+    public int[] root;
+    public int[] rank;         // height of each vertex
     /**
      * <p>Time Complexity: O(n); where n = number of nodes
      * @param size length of disjoint set data structure
      */
-    public UnionByRank(int size) {
+    public OptimizedDisjointSet(int size) {
         root = new int[size];
         rank = new int[size];
         for (int i = 0; i < size; i++) {
@@ -24,18 +24,26 @@ public class UnionByRank implements DisjointSet {
     }
 
     /**
-     * <p>Time Complexity: O(log(n)); where n = number of nodes
+     * <strong>Path Compression</strong>
+     * <p>We don't need to find the root for same node again.
+     * Once we find the root node of {@code x}, we'll update the root node
+     * hence, next time when we'll search for the root node of {@code x}
+     * it will be an {@code O(1)} operation.
+     *
+     * <p>Basically, we plucked all nodes from tree and join directly to the root node
+     * <p>Time Complexity: O(𝛂(n)); where 𝛂(n) = O(1) on average
      * @return root node of {@code x}
      */
     public int find(int x) {
-        while (x != root[x]) {
-            x = root[x];
+        if (x == root[x]) {
+            return x;
         }
-        return x;
+        return root[x] = find(root[x]);
     }
 
     /**
-     * <p>Time Complexity: O(log(n)); where n = number of nodes
+     * <strong>Union By Rank</strong>
+     * <p>Time Complexity: O(𝛂(n)); where 𝛂(n) = O(1) on average
      * Union sets having node {@code x} and node {@code y}
      * and makes root based on the height of the tree i.e., by rank
      */
@@ -57,7 +65,7 @@ public class UnionByRank implements DisjointSet {
     }
 
     /**
-     * <p>Time Complexity: O(log(n)); where n = number of nodes
+     * <p>Time Complexity: O(𝛂(n)); where 𝛂(n) = O(1) on average
      * @return Whether node {@code x} and node {@code y} are connected
      */
     public boolean areConnected(int x, int y) {
@@ -65,7 +73,7 @@ public class UnionByRank implements DisjointSet {
     }
 
     public static void main(String[] args) {
-        UnionByRank qu = new UnionByRank(10);
+        OptimizedDisjointSet qu = new OptimizedDisjointSet(10);
 
         // 1-2-5-6-7 3-8-9 4
         qu.union(1, 2);

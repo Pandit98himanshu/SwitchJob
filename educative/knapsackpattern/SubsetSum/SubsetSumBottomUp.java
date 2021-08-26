@@ -2,7 +2,7 @@
  * Subset Sum : (0/1 Knapsack [Bottom-up approach])
  */
 
-package educative.KnapsackPattern.SubsetSum;
+package educative.knapsackpattern.SubsetSum;
 
 class SubsetSumBottomUp {
     public static int sumArray(int[] arr) {

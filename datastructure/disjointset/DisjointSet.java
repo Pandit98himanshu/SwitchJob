@@ -1,4 +1,4 @@
-package DisjointSet;
+package datastructure.disjointset;
 
 public interface DisjointSet {
     public int find(int x);

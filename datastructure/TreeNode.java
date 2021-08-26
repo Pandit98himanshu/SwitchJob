@@ -1,15 +1,15 @@
-package leetcode;
+package datastructure;
 
 public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode root;
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
+    public TreeNode root;
 
-    TreeNode() {
+    public TreeNode() {
     }
 
-    TreeNode(int val) {
+    public TreeNode(int val) {
         this.val = val;
     }
 
@@ -19,9 +19,9 @@ public class TreeNode {
         this.right = right;
     }
 
-    TreeNode(int[] arr) {
+    public TreeNode(int[] arr) {
         this.root = new TreeNode();
-        this.buildTree(arr, this.root);
+        buildTree(arr, this.root);
     }
 
     public TreeNode buildTree(int[] arr, TreeNode root) {
@@ -31,15 +31,6 @@ public class TreeNode {
     private TreeNode buildTreeUtil(int[] arr, TreeNode root, int i) {
         if (i < arr.length) {
             root = new TreeNode(arr[i]);
-            root.left = buildTreeUtil(arr, root.left, 2 * i + 1);
-            root.right = buildTreeUtil(arr, root.right, 2 * i + 2);
-        }
-        return root;
-    }
-
-    public TreeNode buildTreeUtil(String[] arr, TreeNode root, int i) {
-        if (i < arr.length && !arr[i].equals("null")) {
-            root = new TreeNode(Integer.parseInt(arr[i]));
             root.left = buildTreeUtil(arr, root.left, 2 * i + 1);
             root.right = buildTreeUtil(arr, root.right, 2 * i + 2);
         }

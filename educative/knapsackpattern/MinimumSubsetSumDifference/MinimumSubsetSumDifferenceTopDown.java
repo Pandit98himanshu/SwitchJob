@@ -2,7 +2,7 @@
  * Minimum Subset Sum Difference - Top Down Approach
  */
 
-package educative.KnapsackPattern.MinimumSubsetSumDifference;
+package educative.knapsackpattern.MinimumSubsetSumDifference;
 
 class MinimumSubsetSumDifferenceTopDown {
 	// method to find sum of an array

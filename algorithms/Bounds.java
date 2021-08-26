@@ -1,8 +1,11 @@
+package algorithms;
+
 public class Bounds {
     /**
      * Find last occurrence of element {@code key}
+     *
      * @param arr is the array in which {@code key} needs to be found
-     * @param key
+     * @param key element needs to be searched
      * @return -1 if {@code key} not found
      */
     public int upper_bound(int[] arr, int key) {
@@ -22,8 +25,9 @@ public class Bounds {
 
     /**
      * Find 1st occurrence of element {@code key}
+     *
      * @param arr is the array in which {@code key} needs to be found
-     * @param key
+     * @param key element needs to be searched
      * @return -1 if {@code key} not found
      */
     private int lower_bound(int[] arr, int key) {

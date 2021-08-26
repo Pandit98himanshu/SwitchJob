@@ -2,7 +2,7 @@
  * Union-Find Data Structure
  */
 
-package DisjointSet;
+package datastructure.disjointset;
 
 public class QuickFind implements DisjointSet {
     int[] root;
