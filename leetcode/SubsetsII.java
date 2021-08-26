@@ -8,6 +8,32 @@ import java.util.*;
 
 public class SubsetsII {
     /**
+     * <strong>Backtracking</strong>
+     * <p>Copied from <a href=https://leetcode.com/problems/subsets-ii/solution/>leetcode solution</a>
+     */
+    protected void subsetsWithDupUtil(int[] nums, List<List<Integer>> result, LinkedList<Integer> currSubset, int index) {
+        result.add(new ArrayList<>(currSubset));
+
+        for (int i = index; i < nums.length; i++) {
+            // ignore duplicates
+            if (i != index && nums[i] == nums[i - 1])
+                continue;
+            currSubset.add(nums[i]);
+            subsetsWithDupUtil(nums, result, currSubset, i + 1);
+            currSubset.removeLast();
+        }
+    }
+
+    public List<List<Integer>> subsetsWithDup(int[] nums) {
+        Arrays.sort(nums);      // sort to avoid duplicates
+        List<List<Integer>> result = new ArrayList<>();
+        LinkedList<Integer> currSubset = new LinkedList<>();
+
+        subsetsWithDupUtil(nums, result, currSubset, 0);
+        return result;
+    }
+
+    /**
      * <strong>Bit-masking</strong>
      * <p>Time Complexity: O(n*2<sup>n</sup>)
      * <br>Space Complexity: O(n*2<sup>n</sup>)
@@ -17,7 +43,7 @@ public class SubsetsII {
      * @see <a href=https://www.geeksforgeeks.org/finding-all-subsets-of-a-given-set-in-java/>GfG article</a>,
      * <a href=https://leetcode.com/problems/subsets-ii/solution/>leetcode solution</a>
      */
-    public List<List<Integer>> subsetsWithDup(int[] nums) {
+    public List<List<Integer>> subsetsWithDup1(int[] nums) {
         List<List<Integer>> powerSet = new ArrayList<>();
         int n = nums.length;
         Arrays.sort(nums);                      // sort array to remove duplicates
@@ -38,5 +64,10 @@ public class SubsetsII {
             }
         }
         return powerSet;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {1, 1, 1, 2, 2};
+        System.out.println(new SubsetsII().subsetsWithDup(nums));
     }
 }
