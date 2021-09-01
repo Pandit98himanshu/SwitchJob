@@ -1,3 +1,5 @@
+package objectorienteddesign.ShoppingCart.src;
+
 public interface ShoppingCartDAO {
     void printAllAvailableItems();
     boolean isQuantityAvailable(int itemIndex, int quantity);

@@ -1,3 +1,5 @@
+package objectorienteddesign.Bank.src;
+
 public interface BankDAO {
     public Account getAccountDetails(int accountNumber, String bankName);
 

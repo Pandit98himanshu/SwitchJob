@@ -7,38 +7,39 @@ package leetcode;
 
 import java.util.*;
 
-public class _MergeIntervals {
+public class MergeIntervals {
     /**
      * <strong>Linear Search</strong>
      * <p>Time Complexity: O(n)
      * <br>Space Complexity: O(n)
      */
     private int[][] merge1(int[][] intervals) {
-        // sort asc a/c to end time
-        Arrays.sort(intervals, (int[] o1, int[] o2) -> o1[1] - o2[1]);
-        // sort asc a/c to start time
-        Arrays.sort(intervals, (int[] o1, int[] o2) -> o1[0] - o2[0]);
+        // sort asc a/c to start time,
+        // if start time is same, sort a/c to end time
+        Arrays.sort(intervals, (int[] x, int[] y) -> {
+            if (x[0] != y[0]) return x[0] - y[0];
+            return x[1] - y[1];
+        });
 
         int k = 0;
         int[][] mergedIntervals = new int[intervals.length][2];
         mergedIntervals[k++][0] = intervals[0][0];
 
-        int i, maxEnd = intervals[0][1];
-        for (i = 1; i < intervals.length; i++) {
-            // keep eye on maxEnd interval
-            maxEnd = Math.max(maxEnd, intervals[i - 1][1]);
+        int maxEnd = intervals[0][1];
+        for (int i = 1; i < intervals.length; i++) {
             // if starting time of current interval is less than
             // or equal to ending time of max ending time, our interval doesn't end here
-            if (intervals[i][0] <= maxEnd)
-                continue;
-            //
-            mergedIntervals[k - 1][1] = maxEnd;
-            mergedIntervals[k++][0] = intervals[i][0];
+            if (intervals[i][0] > maxEnd  && intervals[i][1] > maxEnd) {
+                mergedIntervals[k - 1][1] = maxEnd;
+                mergedIntervals[k++][0] = intervals[i][0];
+            }
+            // update maxEnd if end time of current interval greater
+            maxEnd = Math.max(maxEnd, intervals[i][1]);
         }
-        mergedIntervals[k - 1][1] = Math.max(maxEnd, intervals[i - 1][1]);
+        mergedIntervals[k - 1][1] = maxEnd;
 
         int[][] finalResult = new int[k][2];
-        for (i = 0; i < k; i++) {
+        for (int i = 0; i < k; i++) {
             finalResult[i][0] = mergedIntervals[i][0];
             finalResult[i][1] = mergedIntervals[i][1];
         }
@@ -68,5 +69,10 @@ public class _MergeIntervals {
         if (interval1[i][1] > interval2[i][0]) {}
         // todo: write a method to merge 2 intervals copy from MergeKLists
         return new int[][]{{-1, -1}};
+    }
+
+    public static void main(String[] args) {
+        int[][] intervals = {{0,0},{1,2},{5,5},{2,4},{3,3},{5,6},{5,6},{4,6},{0,0},{1,2},{0,2},{4,5}};
+        System.out.println(Arrays.deepToString(new MergeIntervals().merge1(intervals)));
     }
 }

@@ -1,3 +1,5 @@
+package objectorienteddesign.Bank.src;
+
 public interface Bank {
     public void deposit(int accountNumber, double amount) throws InvalidAmountException;
 

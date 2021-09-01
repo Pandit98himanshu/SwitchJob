@@ -1,3 +1,5 @@
+package objectorienteddesign.InMemoryDBMS.src;
+
 import java.util.HashMap;
 
 public class DatabaseManagerImpl implements DatabaseManager {

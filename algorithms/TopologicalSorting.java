@@ -1,6 +1,7 @@
 package algorithms;
 
 import java.util.*;
+import datastructure.AdjacencyList;
 
 public class TopologicalSorting {
     /**
@@ -43,27 +44,11 @@ public class TopologicalSorting {
         visited[i] = true;  // make current vertex visited, so that we'll not visit it again
     }
 
-    /**
-     * @return adjacency list from given array "directedEdges"
-     */
-    private List<Integer>[] createAdjacencyList(int[][] directedEdges, int vertices) {
-        List<Integer>[] adjList = new ArrayList[vertices];
-        for (int i = 0; i < vertices; i++) {
-            List<Integer> list = adjList[directedEdges[i][0]];
-            if (list == null)
-                list = new ArrayList<>();
-            list.add(directedEdges[i][1]);
-            adjList[directedEdges[i][0]] = list;
-        }
-        return adjList;
-    }
-
     public static void main(String[] args) throws Exception {
         int n = 6;
         int[][] graph = {{5, 2}, {5, 0}, {4, 0}, {4, 1}, {2, 3}, {3, 1}};
-        TopologicalSorting obj = new TopologicalSorting();
 
-        List<Integer>[] adjList = obj.createAdjacencyList(graph, n);
-        System.out.println(obj.topologicalSort(adjList));
+        List<Integer>[] adjList = new AdjacencyList(n).createAdjacencyList(graph);
+        System.out.println(new TopologicalSorting().topologicalSort(adjList));
     }
 }

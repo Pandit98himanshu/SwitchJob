@@ -1,16 +1,8 @@
 package leetcode;
 
-public class LowestCommonAncestorOfABinaryTree {
-    /**
-     * Definition for a binary tree node.
-     */
-     private static class TreeNode {
-         int val;
-         TreeNode left;
-         TreeNode right;
-         TreeNode(int x) { val = x; }
-     }
+import datastructure.TreeNode;
 
+public class LowestCommonAncestorOfABinaryTree {
     private TreeNode lca;
 
     /**
@@ -47,5 +39,10 @@ public class LowestCommonAncestorOfABinaryTree {
             lca = root;
 
         return r + left + right;
+    }
+
+    public static void main(String[] args) {
+        //todo: write main function and
+        // check whether TreeNode works properly or not
     }
 }

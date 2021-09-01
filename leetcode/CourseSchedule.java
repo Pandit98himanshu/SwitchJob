@@ -8,6 +8,8 @@ package leetcode;
 import java.util.*;
 
 public class CourseSchedule {
+    // todo: implement topological sort algorithm
+
     boolean isPossible = true;
 
     /**

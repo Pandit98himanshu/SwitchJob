@@ -1,3 +1,5 @@
+package objectorienteddesign.Bank.src;
+
 public class HDFC implements Bank {
     private final String bankName = "HDFC";
     private static final int minimumBalance = 1000;

@@ -1,3 +1,5 @@
+package objectorienteddesign.Bank.src;
+
 public class ICICI implements Bank {
     private final String bankName = "ICICI";
     private static final int minimumBalance = 500;

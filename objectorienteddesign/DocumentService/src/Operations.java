@@ -1,3 +1,5 @@
+package objectorienteddesign.DocumentService.src;
+
 public interface Operations {
     public int create(String username, Document doc);
 

@@ -5,10 +5,12 @@
 
 package leetcode;
 
+import datastructure.TreeNode;
+
 public class BinaryTreePruning {
     /**
      * Definition for a binary tree node.
-     */
+     *
     public static class TreeNode {
         int val;
         TreeNode left;
@@ -20,6 +22,7 @@ public class BinaryTreePruning {
             this.right = null;
         }
     }
+     */
 
     static class Solution {
         /**
@@ -91,6 +94,12 @@ public class BinaryTreePruning {
     }
 
     public static void main(String[] args) {
+        String[] tree = {"1","null","0","0","1"};
+        TreeNode node = new TreeNode();
+        TreeNode root = node.buildTree(tree, node);
+        node.inorder(root);
+
+        /*
         TreeNode root = new TreeNode(1);
         root.right = new TreeNode(0);
         root.right.left = new TreeNode(0);
@@ -99,5 +108,7 @@ public class BinaryTreePruning {
         printBinaryTree(root);
         System.out.println("\nPruned: ");
         printBinaryTree(new Solution().pruneTree(root));
+
+         */
     }
 }

@@ -35,11 +35,11 @@ public class DiameterOfBinaryTree {
     }
 
     public static void main(String[] args) {
-        TreeNode root1 = new TreeNode();
-        root1 = root1.buildTree(new int[]{1,2,3,4,5}, root1);
-//        root1.inorder(root1);
+        TreeNode root = new TreeNode();
+        root = root.buildTree(new int[]{1,2,3,4,5}, root);
+        System.out.println(new DiameterOfBinaryTree().diameterOfBinaryTree(root));
 
-        TreeNode root2 = new TreeNode(new int[]{1,2,3,4,5});
-        root2.inorder(root2);
+//        TreeNode root2 = new TreeNode(new int[]{1,2,3,4,5});
+//        root2.inorder(root2);
     }
 }

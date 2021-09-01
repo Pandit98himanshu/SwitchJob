@@ -1,3 +1,5 @@
+package objectorienteddesign.DocumentService.src;
+
 public class Document {
     private String name;
     private String body;

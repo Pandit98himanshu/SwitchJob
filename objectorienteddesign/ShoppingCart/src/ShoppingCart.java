@@ -1,3 +1,5 @@
+package objectorienteddesign.ShoppingCart.src;
+
 public class ShoppingCart implements Cart {
     ShoppingCartDAOImpl connectToData = new ShoppingCartDAOImpl();
 

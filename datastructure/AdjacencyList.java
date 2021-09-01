@@ -12,9 +12,10 @@ public class AdjacencyList {
     /**
      * @return adjacency list from given array "directedEdges"
      */
-    private List<Integer>[] createAdjacencyList(int[][] directedEdges, int vertices) {
-        List<Integer>[] adjList = new ArrayList[vertices];
-        for (int i = 0; i < vertices; i++) {
+    public List<Integer>[] createAdjacencyList(int[][] directedEdges) {
+        int n = adjList.length;
+        List<Integer>[] adjList = new ArrayList[n];
+        for (int i = 0; i < n; i++) {
             List<Integer> list = adjList[directedEdges[i][0]];
             if (list == null)
                 list = new ArrayList<>();

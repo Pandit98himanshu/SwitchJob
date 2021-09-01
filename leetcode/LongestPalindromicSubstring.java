@@ -20,12 +20,12 @@ public class LongestPalindromicSubstring {
         if (s == null || s.length() == 0)
             return "";
 
-        int start = 0, end = 0; // storing starting and ending index of the longest palindromic substring
+        int len = 0, start = 0, end = 0; // storing starting and ending index of the longest palindromic substring
         for (int i = 0; i < s.length(); i++) {
             int len1 = palindromeLen(s, i, i);          // for odd length of palindrome
             int len2 = palindromeLen(s, i, i + 1);    // for even length of palindrome
-            int len = Math.max(len1, len2);
-            if ((end - start) < len) {
+            if (len < Math.max(len1, len2)) {
+                len = Math.max(len1, len2);
                 start = i - (len - 1) / 2;
                 end = i + len / 2;
             }
