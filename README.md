@@ -14,3 +14,4 @@ Want to practice for coding interviews with me?
 #### [September LeetCoding Challenge 2021](https://leetcode.com/explore/challenge/card/september-leetcoding-challenge-2021/636/week-1-september-1st-september-7th/)
 `Week 1:`
 1. [Array Nesting](https://leetcode.com/problems/array-nesting/) : [Solution](https://github.com/Pandit98himanshu/SwitchJob/blob/master/leetcode/ArrayNesting.java)
+2. [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) : [Solution](https://github.com/Pandit98himanshu/SwitchJob/blob/master/leetcode/UniqueBinarySearchTreesII.java)
