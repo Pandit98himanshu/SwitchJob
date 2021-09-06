@@ -40,7 +40,7 @@ public class ThreeSum {
         }
 
         /**
-         * 2nd own genuine attempt, <strong>but failed</strong>
+         * <strong>Wrong Answer</strong>
          */
         public List<List<Integer>> threeSum2(int[] nums) {
             int n = nums.length;
@@ -69,7 +69,7 @@ public class ThreeSum {
         }
 
         /**
-         * 1st own genuine attempt, <strong>but failed</strong>
+         * <strong>Wrong Answer</strong>
          */
         public List<List<Integer>> threeSum1(int[] nums) {
             int n = nums.length;

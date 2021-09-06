@@ -28,14 +28,14 @@ public class UniqueBinarySearchTreesII {
 
         // value of current node ranges from l to r, inclusive
         for (int i = l; i <= r; i++) {
-            List<TreeNode> left = buildTree(l, i - 1);        // stores left subtree
-            List<TreeNode> right = buildTree(i + 1, r);       // stores right subtree
+            List<TreeNode> left = buildTree(l, i - 1);  // stores left subtree
+            List<TreeNode> right = buildTree(i + 1, r); // stores right subtree
             for (TreeNode leftNode : left) {
                 for (TreeNode rightNode : right) {
-                    TreeNode root = new TreeNode(i);            // create a node ranges from [l, r]
-                    root.left = leftNode;                       // add left subtree
-                    root.right = rightNode;                     // and also add right subtree
-                    res.add(root);                              // after adding left and right subtree, add it to final list
+                    // create a node ranges from [l, r] and add left and right subtree
+                    TreeNode root = new TreeNode(i, leftNode, rightNode);
+                    // after adding left and right subtree, add it to final list
+                    res.add(root);
                 }
             }
         }

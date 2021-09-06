@@ -8,7 +8,9 @@ package leetcode;
 import java.util.*;
 
 public class WordSearchII {
-    // todo: implement trie approach
+    // todo:
+    //  1. implement better approach than current approach
+    //  2. try to implement trie approach
 
     private boolean isFound = false;
     private final int[] d = {0, 1, 0, -1, 0};
@@ -51,16 +53,15 @@ public class WordSearchII {
     public List<String> findWords(char[][] board, String[] words) {
         int m = board.length, n = board[0].length;
         List<String> ans = new ArrayList<>();
-        // our search for word will start from the cell
-        // where we will find 1st character of our word
+        // search the board for each word from "words" array
         for (String word : words) {
             isFound = false;
             for (int i = 0; i < m; i++) {
                 for (int j = 0; j < n; j++) {
-                    if (board[i][j] == word.charAt(0)) {
-                        if (!isFound) {
+                    // our search for word will start from the cell
+                    // where we will find 1st character of our word
+                    if (!isFound && board[i][j] == word.charAt(0)) {
                             dfs(board, word, 0, i, j, new boolean[m][n], ans);
-                        }
                     }
                 }
             }

@@ -8,7 +8,7 @@ import java.util.*;
 
 class TwoSum {
     /**
-     * <strong>Two pointer method</strong>
+     * <strong>2-pointer method</strong>
      * <p>Time Complexity: O(nlogn)
      * <br>Space Complexity: O(n)
      *

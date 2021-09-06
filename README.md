@@ -3,7 +3,7 @@ Solutions to coding problems for switching the tech job.
 
 <strong>Disclaimer: Any file starts with _ (underscore) is either brute force or incomplete and will be taken care of, later.</strong>
 
-### Practice makes a man/women/others :wink: perfect!
+### Practice makes a man/woman/others :wink: perfect!
 Want to practice for coding interviews with me?
 
 `Contact me`
@@ -15,3 +15,6 @@ Want to practice for coding interviews with me?
 `Week 1:`
 1. [Array Nesting](https://leetcode.com/problems/array-nesting/) : [Solution](https://github.com/Pandit98himanshu/SwitchJob/blob/master/leetcode/ArrayNesting.java)
 2. [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) : [Solution](https://github.com/Pandit98himanshu/SwitchJob/blob/master/leetcode/UniqueBinarySearchTreesII.java)
+3. [Erect the Fence](https://leetcode.com/problems/erect-the-fence/)
+4. [Sum of Distances in Tree](https://leetcode.com/problems/sum-of-distances-in-tree/)
+5. [Orderly Queue](https://leetcode.com/problems/orderly-queue/) : [Solution](https://github.com/Pandit98himanshu/SwitchJob/blob/master/leetcode/OrderlyQueue.java)
