@@ -18,3 +18,5 @@ Want to practice for coding interviews with me?
 3. [Erect the Fence](https://leetcode.com/problems/erect-the-fence/)
 4. [Sum of Distances in Tree](https://leetcode.com/problems/sum-of-distances-in-tree/)
 5. [Orderly Queue](https://leetcode.com/problems/orderly-queue/) : [Solution](https://github.com/Pandit98himanshu/SwitchJob/blob/master/leetcode/OrderlyQueue.java)
+6. [Slowest Key](https://leetcode.com/problems/slowest-key/) : [Solution](https://github.com/Pandit98himanshu/SwitchJob/blob/master/leetcode/SlowestKey.java)
+7. [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) : [Solution](https://github.com/Pandit98himanshu/SwitchJob/blob/master/leetcode/ReverseLinkedList.java)

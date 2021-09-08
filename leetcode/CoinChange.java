@@ -1,3 +1,8 @@
+/*
+ * 322. Coin Change
+ * https://leetcode.com/problems/coin-change/
+ */
+
 package leetcode;
 
 import java.util.*;
@@ -7,6 +12,7 @@ public class CoinChange {
      * <strong>Dynamic Programming</strong> : 10 ms
      * <p>Time Complexity: O(n * amount)
      * <br>Space Complexity: O(amount)
+     * @see <a href=https://leetcode.com/problems/coin-change/discuss/77360/C++-O(n*amount)-time-O(amount)-space-DP-solution>leetcode discuss</a>
      */
     public int coinChange(int[] coins, int amount) {
         int[] dp = new int[amount + 1];

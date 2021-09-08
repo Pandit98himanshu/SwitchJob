@@ -75,7 +75,7 @@ public class MergeKSortedLists {
     /**
      * <strong>Min-Heap</strong>
      * <p>Copied from <a href=https://leetcode.com/submissions/detail/541445047/>leetcode submissions</a>
-     * <p>Time Complexity: O(n*log(m)); where m = lists.length
+     * <p>Time Complexity: O(n*log(k)); where k = lists.length
      * <br>Space Complexity: O(n); where n = number of nodes
      */
     public ListNode mergeKLists(ListNode[] lists) {
@@ -99,7 +99,7 @@ public class MergeKSortedLists {
 
     /**
      * <strong>Linear Search</strong>
-     * <p>Time Complexity: O(m*n); where m = lists.length, n = longest list size
+     * <p>Time Complexity: O(k * n); where k = lists.length, n = longest list size
      * <br>Space Complexity: O(1)
      *
      * @return merged linked list of K sorted lists
