@@ -18,6 +18,7 @@ public class LargestPlusSign {
     public int orderOfLargestPlusSign(int n, int[][] mines) {
         TreeSet<Integer>[] row2zeros = new TreeSet[n];
         TreeSet<Integer>[] col2zeros = new TreeSet[n];
+
         for (int[] mine : mines) {
             if (row2zeros[mine[0]] == null) {
                 row2zeros[mine[0]] = new TreeSet<>();
@@ -74,6 +75,7 @@ public class LargestPlusSign {
 
     /**
      * <strong>Dynamic Programming</strong> : 55 ms
+     * <p>Copied from leetcode submission
      *
      * <p>Time Complexity: O(N<sup>2</sup>)
      * <br>Space Complexity: O(N<sup>2</sup>)
@@ -106,6 +108,7 @@ public class LargestPlusSign {
         }
         return res;
     }
+
     private void print(int[][] arr) {
         for (int[] row : arr)
             System.out.println(Arrays.toString(row));

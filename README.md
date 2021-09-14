@@ -8,7 +8,7 @@ Want to practice for coding interviews with me?
 
 `Contact me`
 >[Telegram](https://telegram.org) : @himanshu_82  
->[Gmail](https://www.google.com/intl/en-GB/gmail/about/#) : pandit98himanshu@gmail.com
+<!-- >[Gmail](https://www.google.com/intl/en-GB/gmail/about/#) : pandit98himanshu@gmail.com -->
 
 ###
 #### [September LeetCoding Challenge 2021](https://leetcode.com/explore/challenge/card/september-leetcoding-challenge-2021/636/week-1-september-1st-september-7th/)
@@ -24,3 +24,8 @@ Want to practice for coding interviews with me?
 `Week 2:`
 1. [Shifting Letters](https://leetcode.com/problems/shifting-letters/) : [Solution](https://github.com/Pandit98himanshu/SwitchJob/blob/master/leetcode/ShiftingLetters.java)
 2. [Largest Plus Sign](https://leetcode.com/problems/largest-plus-sign/) : [Solution](https://github.com/Pandit98himanshu/SwitchJob/blob/master/leetcode/LargestPlusSign.java)
+3. [Arithmetic Slices II - Subsequence](https://leetcode.com/problems/arithmetic-slices-ii-subsequence/)
+4. [Basic Calculator](https://leetcode.com/problems/basic-calculator/)
+5. [Reachable Nodes In Subdivided Graph](https://leetcode.com/problems/reachable-nodes-in-subdivided-graph/)
+6. [Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons/) : [Solution](https://github.com/Pandit98himanshu/SwitchJob/blob/master/leetcode/MaximumNumberOfBalloons.java)
+7. [Reverse Only Letters](https://leetcode.com/problems/reverse-only-letters/) : [Solution](https://github.com/Pandit98himanshu/SwitchJob/blob/master/leetcode/ReverseOnlyLetters.java)
