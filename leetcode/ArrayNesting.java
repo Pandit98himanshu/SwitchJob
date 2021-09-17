@@ -1,9 +1,8 @@
-/*
- * 565. Array Nesting
- * https://leetcode.com/problems/array-nesting/
- */
-
 package leetcode;
+
+/**
+ * <a href=https://leetcode.com/problems/array-nesting/>565. Array Nesting</a>
+ */
 
 public class ArrayNesting {
 

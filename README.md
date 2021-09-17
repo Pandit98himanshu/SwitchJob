@@ -29,3 +29,8 @@ Want to practice for coding interviews with me?
 5. [Reachable Nodes In Subdivided Graph](https://leetcode.com/problems/reachable-nodes-in-subdivided-graph/)
 6. [Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons/) : [Solution](https://github.com/Pandit98himanshu/SwitchJob/blob/master/leetcode/MaximumNumberOfBalloons.java)
 7. [Reverse Only Letters](https://leetcode.com/problems/reverse-only-letters/) : [Solution](https://github.com/Pandit98himanshu/SwitchJob/blob/master/leetcode/ReverseOnlyLetters.java)
+
+`Week 3:`
+1. [Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/) : [Solution](https://github.com/Pandit98himanshu/SwitchJob/blob/master/leetcode/LongestTurbulentSubarray.java)
+2. [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) : [Solution](https://github.com/Pandit98himanshu/SwitchJob/blob/master/leetcode/SpiralMatrix.java)
+3. [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/) : [Solution](https://github.com/Pandit98himanshu/SwitchJob/blob/master/leetcode/IntersectionOfTwoArraysII.java)
