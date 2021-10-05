@@ -87,6 +87,4 @@ public class TreeNode {
             preorder(root.right);
         }
     }
-
-    // todo: write a function which reverses from binary tree to original form
 }

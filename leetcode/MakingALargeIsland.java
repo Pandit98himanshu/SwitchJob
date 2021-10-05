@@ -1,11 +1,10 @@
-/*
- * 827. Making A Large Island
- * https://leetcode.com/problems/making-a-large-island/
- */
-
 package leetcode;
 
 import java.util.*;
+
+/**
+ * <a href=https://leetcode.com/problems/making-a-large-island/>827. Making A Large Island</a>
+ */
 
 public class MakingALargeIsland {
     static class Solution {

@@ -5,22 +5,9 @@
 
 package leetcode;
 
+import datastructure.TreeNode;
+
 public class LowestCommonAncestorOfBST {
-    /**
-     * Provides implementation of Binary Search Tree
-     */
-    static public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-            left = null;
-            right = null;
-        }
-    }
-
     static class Solution {
         /**
          * <strong>The lowest common ancestor is defined between two nodes {@code p} and {@code q}

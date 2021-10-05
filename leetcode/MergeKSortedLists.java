@@ -5,102 +5,100 @@
 
 package leetcode;
 
-import java.util.*;
+import datastructure.ListNode;
+
+import java.util.PriorityQueue;
 
 public class MergeKSortedLists {
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     /**
-     * <strong>Divide and Conquer</strong>
-     * <p>Copied from <a href=https://leetcode.com/submissions/detail/541445047/>leetcode submissions</a>
+     * <strong>Conquer</strong>
+     * <p>Time Complexity: O(n)
+     * <br>Space Complexity: O(k) : 40.8 MB
+     *
+     * @see <a href=https://leetcode.com/submissions/detail/541445047/>leetcode submissions</a>
      */
     public ListNode mergeKLists2(ListNode[] lists) {
         int k = lists.length;
+        // edge case
         if (k == 0)
             return null;
+        /*
+        // Runtime : 114 ms
+        for (int i = k-2; i >= 0; i--) {
+            lists[i] = merge2Lists(lists[i], lists[i+1]);
+        }
+        */
 
-        return mergeKLists(lists, 0, k - 1);
+        // Runtime : 1 ms
+        while (k > 1) {
+            int i = 0;
+            for (int j = 0; j < k; j += 2) {
+                if (j == k - 1)
+                    lists[i] = lists[j];
+                else
+                    lists[i] = merge2Lists(lists[j], lists[j + 1]);
+                i++;
+            }
+            k = i;
+        }
+
+        return lists[0];
     }
 
-    public ListNode mergeKLists(ListNode[] lists, int start, int end) {
-        if (end == start)
-            return lists[start];
-
-        int mid = start + ((end - start) / 2);
-        ListNode listA = mergeKLists(lists, start, mid);
-        ListNode listB = mergeKLists(lists, mid + 1, end);
-
-        return mergeLists(listA, listB);
-    }
-
-    // merge 2 sorted lists
-    public ListNode mergeLists(ListNode l1, ListNode l2) {
-        ListNode h = new ListNode(0);
-        ListNode ans = h;
+    // merge 2 sorted lists in-place
+    public ListNode merge2Lists(ListNode l1, ListNode l2) {
+        ListNode dummyHead = new ListNode(0);
+        ListNode curr = dummyHead;
         while (l1 != null && l2 != null) {
             if (l1.val < l2.val) {
-                h.next = l1;
-                h = h.next;
+                curr.next = l1;
+                curr = curr.next;
                 l1 = l1.next;
             } else {
-                h.next = l2;
-                h = h.next;
+                curr.next = l2;
+                curr = curr.next;
                 l2 = l2.next;
             }
         }
+        // append remaining nodes
         if (l1 == null) {
-            h.next = l2;
+            curr.next = l2;
         }
         if (l2 == null) {
-            h.next = l1;
+            curr.next = l1;
         }
-        return ans.next;
+        return dummyHead.next;
     }
 
     /**
      * <strong>Min-Heap</strong>
      * <p>Copied from <a href=https://leetcode.com/submissions/detail/541445047/>leetcode submissions</a>
-     * <p>Time Complexity: O(n*log(k)); where k = lists.length
-     * <br>Space Complexity: O(n); where n = number of nodes
+     * <p>Time Complexity: O(n*log(k)); where k = lists.length, n = number of nodes
+     * <br>Space Complexity: O(k);
      */
     public ListNode mergeKLists(ListNode[] lists) {
-        PriorityQueue<ListNode> pq = new PriorityQueue<>((a, b) -> Integer.compare(a.val, b.val));
+        PriorityQueue<ListNode> pq = new PriorityQueue<>((a, b) -> a.val - b.val);
         // store 1st element of all k lists in a min-heap
-        for (int i = 0; i < lists.length; i++) {
-            if (lists[i] != null)
-                pq.offer(lists[i]);
+        for (ListNode node : lists) {
+            if (node != null)
+                pq.offer(node);
         }
-        ListNode res = new ListNode(-1);        // stores result
-        ListNode currRes = res;                     // iterator for result list
+        ListNode res = new ListNode();              // stores result
+        ListNode curr = res;                        // iterator for result list
         while (!pq.isEmpty()) {
-            ListNode current = pq.poll();           // bring minimum element
-            currRes.next = new ListNode(current.val);   // add min element into result array
-            currRes = currRes.next;                 // move iterator of result list forward
-            if (current.next != null)
-                pq.offer(current.next);             // put next element from that list into min-heap
+            ListNode temp = pq.poll();              // bring minimum element
+            curr.next = new ListNode(temp.val);     // add min element into result array
+            curr = curr.next;                       // move iterator of result list forward
+            if (temp.next != null)
+                pq.offer(temp.next);                // put next element from that list into min-heap
         }
         return res.next;
     }
 
     /**
      * <strong>Linear Search</strong>
-     * <p>Time Complexity: O(k * n); where k = lists.length, n = longest list size
-     * <br>Space Complexity: O(1)
+     * <p>Time Complexity: O(k * n); where k = lists.length, n = number of values in all lists
+     * <br>Space Complexity: O(n)
      *
      * @return merged linked list of K sorted lists
      */

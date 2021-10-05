@@ -8,11 +8,17 @@ package leetcode;
  * @author Himanshu Shekhar
  */
 
-public class CheckIfWordCanBePlacedInCrossword {
+public class _CheckIfWordCanBePlacedInCrossword {
+    /**
+     * <a href=https://leetcode.com/problems/check-if-word-can-be-placed-in-crossword/discuss/1486536/C%2B%2B-Iterative>Similar but better approach</a>
+     */
     private int m;      // # rows
     private int n;      // # columns
     private int len;    // length of the word
 
+    /**
+     * <strong>Not working</strong>
+     */
     private boolean verticallyDown(char[][] board, String word, int x, int y, int p) {
         for (; x < m && p < len; x++, p++) {
             // cell is empty or corresponding
@@ -127,6 +133,6 @@ public class CheckIfWordCanBePlacedInCrossword {
     public static void main(String[] args) {
         char[][] board = {{' ', '#', 'a'}, {'#', ' ', 'b'}, {' ', '#', 'a'}};
         String word = "ac";
-        System.out.println(new CheckIfWordCanBePlacedInCrossword().placeWordInCrossword(board, word));
+        System.out.println(new _CheckIfWordCanBePlacedInCrossword().placeWordInCrossword(board, word));
     }
 }

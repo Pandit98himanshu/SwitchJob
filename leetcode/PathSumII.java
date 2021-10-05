@@ -1,31 +1,14 @@
-/*
- * 113. Path Sum II
- * https://leetcode.com/problems/path-sum-ii/
- */
 package leetcode;
+
+import datastructure.TreeNode;
 
 import java.util.*;
 
+/**
+ * <a href=https://leetcode.com/problems/path-sum-ii/>113. Path Sum II</a>
+ */
+
 public class PathSumII {
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
-
     List<List<Integer>> res = new ArrayList<>();
 
     public void dfs(TreeNode root, int targetSum, int currSum, int[] list, int index) {

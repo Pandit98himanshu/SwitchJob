@@ -1,11 +1,10 @@
-/*
- * 1986. Minimum Number of Work Sessions to Finish the Tasks
- * https://leetcode.com/problems/minimum-number-of-work-sessions-to-finish-the-tasks/
- */
-
 package leetcode;
 
 import java.util.*;
+
+/**
+ * <a href=https://leetcode.com/problems/minimum-number-of-work-sessions-to-finish-the-tasks/>1986. Minimum Number of Work Sessions to Finish the Tasks</a>
+ */
 
 public class MinimumNumberOfWorkSessionsToFinishTheTasks {
     /**
