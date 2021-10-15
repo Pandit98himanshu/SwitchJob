@@ -5,29 +5,61 @@
 
 package leetcode;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class _ZeroOneMatrix {
+    public static void print(Object... O) {
+        System.out.println(Arrays.deepToString(O));
+    }
+
+    public static void main(String[] args) {
+        int[][] mat = {{0, 0, 0}, {0, 1, 0}, {1, 1, 1}};
+        print(new Solution().updateMatrix(mat));
+    }
+
     static class Solution {
         /**
          * <strong>Using DP</strong>
          */
-        public int[][] updateMatrix(int[][] mat) {
-            // todo: solve using DP
-            //  https://leetcode.com/problems/01-matrix/solution/
+        private int m, n;
+        private int[] d = {0, 1, 0, -1, 0};
+        private int[][] ans;
 
-            return new int[][]{};
+        public int[][] updateMatrix(int[][] mat) {
+            m = mat.length;
+            n = mat[0].length;
+            ans = new int[m][n];
+
+            for (int[] row : ans)
+                Arrays.fill(row, Integer.MAX_VALUE);
+
+            outer:
+            for (int i = 0; i < m; i++) {
+                for (int j = 0; j < n; j++) {
+                    if (mat[i][j] == 0) {
+                        startFill(mat, i, j, 0);
+                    }
+                }
+            }
+            return ans;
         }
 
-        /**
-         * <strong>Using BFS</strong>
-         */
-        static class Pair {
-            int x, y;
+        private void startFill(int[][] mat, int x, int y, int val) {
+            boolean outOfBound = x < 0 || x >= m || y < 0 || y >= n;
+            if (outOfBound)
+                return;
 
-            public Pair(int x, int y) {
-                this.x = x;
-                this.y = y;
+            if (mat[x][y] == 1 || val == 0 && ans[x][y] == 0)
+                val = 0;
+
+            ans[x][y] = Math.min(ans[x][y], val);
+
+            for (int i = 0; i < 4; i++) {
+                int next_x = x + d[i], next_y = y + d[i + 1];
+                if ()
+                    startFill(mat, next_x, next_y, val + 1);
             }
         }
 
@@ -68,14 +100,17 @@ public class _ZeroOneMatrix {
 
             return res;
         }
-    }
 
-    public static void print(Object... O) {
-        System.out.println(Arrays.deepToString(O));
-    }
+        /**
+         * <strong>Using BFS</strong>
+         */
+        static class Pair {
+            int x, y;
 
-    public static void main(String[] args) {
-        int[][] mat = {{0, 0, 0}, {0, 1, 0}, {1, 1, 1}};
-        print(new Solution().updateMatrix(mat));
+            public Pair(int x, int y) {
+                this.x = x;
+                this.y = y;
+            }
+        }
     }
 }
