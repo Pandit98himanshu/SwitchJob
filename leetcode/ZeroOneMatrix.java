@@ -1,15 +1,17 @@
-/*
- * 542. 01 Matrix
- * https://leetcode.com/problems/01-matrix/
- */
-
 package leetcode;
 
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class _ZeroOneMatrix {
+/**
+ * Created at : 09/10/21
+ * <p>
+ * <a href=https://leetcode.com/problems/01-matrix/>542. 01 Matrix</a>
+ *
+ * @author Himanshu Shekhar
+ */
+public class ZeroOneMatrix {
     public static void print(Object... O) {
         System.out.println(Arrays.deepToString(O));
     }
@@ -20,97 +22,178 @@ public class _ZeroOneMatrix {
     }
 
     static class Solution {
-        /**
-         * <strong>Using DP</strong>
-         */
         private int m, n;
         private int[] d = {0, 1, 0, -1, 0};
-        private int[][] ans;
+        private int[][] minDist;
 
+        /**
+         * <strong>DP</strong> : 3 ms
+         */
         public int[][] updateMatrix(int[][] mat) {
             m = mat.length;
             n = mat[0].length;
-            ans = new int[m][n];
 
-            for (int[] row : ans)
-                Arrays.fill(row, Integer.MAX_VALUE);
+            // Use mat[][] as a dynamic programming array. We need two passes
+            // through the dp array. One pass scanning cells moving down and right,
+            // the other up and left. We make processing more efficient for larger
+            // arrays by referencing the rows of the array through one-dimensional
+            // arrays row[] and prevRow[], to save the time of repeatedly using two
+            // indexes. Also use separate processing for the
+            // 1) starting corner cell,
+            // 2) starting row,
+            // 3) all other cells.
+            // This saves us from doing separate checks in a single generalized loop
+            // that would need to repeatedly check to see if we are at the starting
+            // row or the starting column.
 
-            outer:
+            // ------- Pass #1: Scan down and right.  Look up and left from each cell.
+            int[] row = mat[0];
+            int[] prevRow;
+            if (row[0] == 1)                        // Top left corner
+                row[0] = m + n;
+            for (int c = 1; c < n; c++)             // Top row (except top left corner)
+                if (row[c] == 1)
+                    row[c] = row[c - 1] + 1;
+            for (int r = 1; r < m; r++) {           // All other rows (not first row)
+                prevRow = row;
+                row = mat[r];
+                if (row[0] == 1)                    // First column in the current row
+                    row[0] = prevRow[0] + 1;
+                for (int c = 1; c < n; c++)         // Other columns in the current row
+                    if (row[c] == 1)
+                        row[c] = Math.min(row[c - 1], prevRow[c]) + 1;
+            }
+
+            // ------- Pass #2: Scan left and up.  Look right and below from each cell.
+            row = mat[m - 1];
+            for (int c = n - 2; c >= 0; c--)        // Bottom row (except bottom right corner)
+                if (row[c] > 1)
+                    row[c] = Math.min(row[c], row[c + 1] + 1);
+            for (int r = m - 2; r >= 0; r--) {      // All other rows (not bottom row)
+                prevRow = row;
+                row = mat[r];
+                if (row[n - 1] > 1)                 // Rightmost column in current row
+                    row[n - 1] = Math.min(row[n - 1], prevRow[n - 1] + 1);
+                for (int c = n - 2; c >= 0; c--)    // Other columns in current row
+                    if (row[c] > 1)
+                        row[c] = Math.min(row[c], Math.min(row[c + 1], prevRow[c]) + 1);
+            }
+            return mat;
+        }
+
+        /**
+         * <strong>Left & right swipe</strong> : 5 ms
+         */
+        public int[][] updateMatrix3(int[][] mat) {
+            m = mat.length;
+            n = mat[0].length;
+            final int inf = Integer.MAX_VALUE - 10000;      // represents infinity
+            // we subtracted 10^4, because maximum order of "mat" is 10^4
+
+            minDist = new int[m][n];                // stores result
+            // traverse whole array from top-left to bottom-right
             for (int i = 0; i < m; i++) {
                 for (int j = 0; j < n; j++) {
+                    if (mat[i][j] != 0) {
+                        // find minimum from top and left adjacent cell
+                        minDist[i][j] = Math.min(
+                                        (i - 1 < 0) ? inf : minDist[i - 1][j] + 1,
+                                        (j - 1 < 0) ? inf : minDist[i][j - 1] + 1
+                        );
+                    }
+                }
+            }
+            // traverse whole array from bottom-right to top-left
+            for (int i = m - 1; i >= 0; i--) {
+                for (int j = n - 1; j >= 0; j--) {
+                    if (mat[i][j] != 0) {
+                        // find minimum from bottom and right adjacent cell
+                        minDist[i][j] = Math.min(minDist[i][j],
+                                Math.min(
+                                        (i + 1 >= m) ? minDist[i][j] : minDist[i + 1][j] + 1,
+                                        (j + 1 >= n) ? minDist[i][j] : minDist[i][j + 1] + 1
+                                )
+                        );
+                    }
+                }
+            }
+            return minDist;
+        }
+
+        /**
+         * <strong>DFS</strong> : 1724 ms
+         * <p>Copied from <a href=https://leetcode.com/problems/01-matrix/discuss/1371441/Java-DFS>letcode discuss</a>
+         */
+        public int[][] updateMatrix2(int[][] mat) {
+            m = mat.length;
+            n = mat[0].length;
+            minDist = new int[m][n];
+
+            for (int i = 0; i < m; i++) {
+                for (int j = 0; j < n; j++) {
+                    // considering zeroes as source,
+                    // start filling resultant array
                     if (mat[i][j] == 0) {
                         startFill(mat, i, j, 0);
                     }
                 }
             }
-            return ans;
+            return minDist;
         }
 
-        private void startFill(int[][] mat, int x, int y, int val) {
-            boolean outOfBound = x < 0 || x >= m || y < 0 || y >= n;
-            if (outOfBound)
-                return;
-
-            if (mat[x][y] == 1 || val == 0 && ans[x][y] == 0)
-                val = 0;
-
-            ans[x][y] = Math.min(ans[x][y], val);
-
-            for (int i = 0; i < 4; i++) {
-                int next_x = x + d[i], next_y = y + d[i + 1];
-                if ()
-                    startFill(mat, next_x, next_y, val + 1);
+        private void startFill(int[][] mat, int x, int y, int currVal) {
+            boolean inBound = (x >= 0 && x < m && y >= 0 && y < n);
+            // change value of current cell and visit adjacent cells, if
+            // 1) it is not visited (current cell has "1" & it's min distance is "0")
+            // 2) current distance value is lesser than previous
+            if (inBound && ((currVal == 0 || mat[x][y] == 1) && (minDist[x][y] == 0 || minDist[x][y] > currVal))) {
+                minDist[x][y] = currVal;
+                // visit all 4 adjacent cells and change their values
+                for (int i = 0; i < 4; i++) {
+                    int nextX = x + d[i];
+                    int nextY = y + d[i + 1];
+                    startFill(mat, nextX, nextY, currVal + 1);
+                }
             }
         }
 
         /**
-         * The idea is, all 4 adjacent cells around cell containing {@code 0} is {@code 1},
-         * and all 4 adjacent cells around cell containing {@code 1} is {@code 2} (if {@code 0} is not present)
+         * <strong>Multi-source BFS</strong> : 14 ms
+         *
+         * <p>The idea is, all 4 adjacent cells around cell containing 0 is 1,
+         * and all 4 adjacent cells around cell containing 1 is 2, and-so-on...
          */
         public int[][] updateMatrix1(int[][] mat) {
-            int rows = mat.length, cols = mat[0].length;
-            int[][] res = new int[rows][cols];      // resultant array
-            Queue<Pair> q = new LinkedList<>();     // stores cells needs to be processed
-            // traverse whole array and mark all zeroes
-            for (int i = 0; i < rows; i++) {
-                for (int j = 0; j < cols; j++) {
+            m = mat.length;
+            n = mat[0].length;
+            minDist = new int[m][n];
+
+            Queue<int[]> q = new LinkedList<>();        // store sources
+            // traverse whole array, mark all zeroes & store it as source in queue
+            for (int i = 0; i < m; i++) {
+                for (int j = 0; j < n; j++) {
                     if (mat[i][j] == 0) {
-                        res[i][j] = 0;
-                        q.add(new Pair(i, j));          // add all zero positions into queue,
-                        // so that we can start BFS operation from that cell
+                        q.add(new int[]{i, j});         // add all zero positions in the queue
                     } else {
-                        res[i][j] = Integer.MAX_VALUE;  // if it is not zero, mark it as infinite
+                        minDist[i][j] = Integer.MAX_VALUE;
                     }
                 }
             }
 
             while (!q.isEmpty()) {
-                Pair curr = q.poll();
-                int[][] moves = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-                for (int i = 0; i < 4; i++) {
-                    int nextRow = curr.x + moves[i][0], nextCol = curr.y + moves[i][1];
-                    if (nextRow >= 0 && nextCol >= 0 && nextRow < rows && nextCol < cols) {
-                        if (res[nextRow][nextCol] > res[curr.x][curr.y] + 1) {
-                            res[nextRow][nextCol] = res[curr.x][curr.y] + 1;
-                            q.add(new Pair(nextRow, nextCol));
-                        }
+                int[] curr = q.poll();                  // polling each source
+                for (int i = 0; i < 4; i++) {           // start traversing its neighbours
+                    int nextX = curr[0] + d[i];
+                    int nextY = curr[1] + d[i + 1];
+                    boolean inBound = (nextX >= 0 && nextX < m && nextY >= 0 && nextY < n);
+                    // store minimum distance from zero and also traverse its neighbors
+                    if (inBound && minDist[nextX][nextY] > minDist[curr[0]][curr[1]] + 1) {
+                        minDist[nextX][nextY] = minDist[curr[0]][curr[1]] + 1;
+                        q.add(new int[]{nextX, nextY});
                     }
                 }
             }
-
-            return res;
-        }
-
-        /**
-         * <strong>Using BFS</strong>
-         */
-        static class Pair {
-            int x, y;
-
-            public Pair(int x, int y) {
-                this.x = x;
-                this.y = y;
-            }
+            return minDist;
         }
     }
 }

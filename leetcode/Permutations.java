@@ -29,7 +29,7 @@ public class Permutations {
         }
         // iterate over all array
         for (int i = 0; i < nums.length; i++) {
-            if (added[i])       //
+            if (added[i])
                 continue;
             added[i] = true;
             // add current element to our current hypothetical solution
