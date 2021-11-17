@@ -10,7 +10,7 @@ public class ReverseNodesInKGroup {
     /**
      * Definition for singly-linked list.
      */
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 

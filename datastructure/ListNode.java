@@ -19,11 +19,20 @@ public class ListNode {
         this.next = next;
     }
 
+    public void buildList(ListNode head, int[] nums) {
+        ListNode temp = head;
+        for (int num : nums) {
+            temp.next = new ListNode(num);
+            temp = head.next;
+        }
+    }
+
     public void printList(ListNode head) {
         ListNode curr = head;
         while (curr != null) {
-            System.out.println(curr.val + " ");
+            System.out.print(curr.val + " ");
             curr = curr.next;
         }
+        System.out.println();
     }
 }
