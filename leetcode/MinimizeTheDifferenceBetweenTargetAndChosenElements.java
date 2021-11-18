@@ -1,11 +1,14 @@
-/*
- * 5852. Minimize the Difference Between Target and Chosen Elements
- * https://leetcode.com/problems/minimize-the-difference-between-target-and-chosen-elements/
- */
-
 package leetcode;
 
 import java.util.*;
+
+/**
+ * Created at : 23/08/21
+ * <p>
+ * <a href=https://leetcode.com/problems/minimize-the-difference-between-target-and-chosen-elements/>5852. Minimize the Difference Between Target and Chosen Elements</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class MinimizeTheDifferenceBetweenTargetAndChosenElements {
     private int helper(int[][] mat, int target, int row, int sum, int minDiff) {

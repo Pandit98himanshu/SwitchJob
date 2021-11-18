@@ -46,6 +46,12 @@ public class DecodeWays {
      * <p>Time Complexity: O(n)
      * <br>Space Complexity: O(n)
      * <pre>only recursion will take O(2<sup>n</sup>)
+     */
+    public int numDecodings1(String s) {
+        return countNumDecodings(s, new HashMap<>());
+    }
+
+    /**
      * @param s    current string
      * @param memo stores calculated result
      */
@@ -77,10 +83,6 @@ public class DecodeWays {
         }
         memo.put(s, ans);       // store current result
         return ans;
-    }
-
-    public int numDecodings1(String s) {
-        return countNumDecodings(s, new HashMap<>());
     }
 
     public static void main(String[] args) {

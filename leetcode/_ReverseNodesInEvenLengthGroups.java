@@ -29,43 +29,62 @@ public class _ReverseNodesInEvenLengthGroups {
 
         head.printList(head);
         new _ReverseNodesInEvenLengthGroups().reverseEvenLengthGroups(head);
-        head.printList(head);
+//        head.printList(head);
     }
 
-    private static ListNode reverseLL(ListNode curr, int size) {
+    /**
+     * Reverses singly-linked-list starting from node {@code curr} till length {@code size}
+     */
+    private static void reverseLL(ListNode curr, int size) {
         ListNode last = curr, next = curr.next, nNext = next.next;
-        for (int i = 0; i < size; i++) {
+        while (size-- > 1) {
             next.next = curr;
             curr = next;
             next = nNext;
+            if (nNext.next == null)
+                break;
             nNext = nNext.next;
+            System.out.println("curr = " + curr.val + ", next = " + next.val + ", nNext = " + nNext.val + ", last = " + last.val);
         }
-        last.next = nNext;
-        return curr;
+        last.next = next;
     }
 
+    /**
+     * <strong>Wrong answer</strong>
+     */
     public ListNode reverseEvenLengthGroups(ListNode head) {
-        ListNode p = head;
-        for (int i = 1; p.next != null; i++) {
-            if (i % 2 != 0) {
-                for (int j = 0; j < i - 1; j++) {
-                    if (p == null) return head;
-                    p = p.next;
+        ListNode prev = head;
+        for (int len = 1; prev.next != null; len++) {
+            // if length of current group is odd
+            // skip this group
+            if (len % 2 != 0) {
+                for (int i = 1; i < len; i++) {
+                    if (prev == null)
+                        return head;
+                    prev = prev.next;
                 }
             } else {
-                ListNode l = p.next, f = p.next;
-                int size = 0;
-                for (int j = 0; j < i; j++) {
-                    if (f == null) {
-                        if (size % 2 == 0) break;
-                        else return head;
-                    }
-                    f = f.next;
+                ListNode l = prev.next;    // last element in current group will be first after reversing
+                ListNode f = prev.next;    // first element in current group will be last after reversing
+                int size = 1;           // find length of current group
+                for (int i = 1; i < len; i++) {
                     size++;
+                    f = f.next;
+                    if (f == null) {    // we reached last element of the given linked list
+                        // if length of current group is odd
+                        // then we should not reverse this
+                        // (this must be last group)
+                        if (size % 2 != 0)
+                            return head;
+                        else
+                            break;
+                    }
                 }
-                System.out.println("prev = " + p.val + " curr = " + p.next.val);
-                p.next = reverseLL(p.next, size);
-                p = l;
+                System.out.println("size = " + size + ", prev = " + prev.val + ", curr = " + prev.next.val + ", l = " + l.val);
+                reverseLL(prev.next, size);
+                prev.next = f;
+                head.printList(head);
+                prev = l.next;
             }
         }
         return head;

@@ -1,9 +1,12 @@
-/*
- * 5. Longest Palindromic Substring
- * https://leetcode.com/problems/longest-palindromic-substring/
- */
-
 package leetcode;
+
+/**
+ * Created at : 31/08/21
+ * <p>
+ * <a href=https://leetcode.com/problems/longest-palindromic-substring/>5. Longest Palindromic Substring</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class LongestPalindromicSubstring {
     /**

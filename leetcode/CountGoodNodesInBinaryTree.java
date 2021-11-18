@@ -1,23 +1,14 @@
-/*
- * 1448. Count Good Nodes in Binary Tree
- * https://leetcode.com/problems/count-good-nodes-in-binary-tree/
- */
-
 package leetcode;
 
+import datastructure.TreeNode;
+
+/**
+ * <a href=https://leetcode.com/problems/count-good-nodes-in-binary-tree/>1448. Count Good Nodes in Binary Tree</a>
+ *
+ * @author Himanshu Shekhar
+ */
+
 public class CountGoodNodesInBinaryTree {
-    /**
-     * Definition for a binary tree node.
-     */
-    private static class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-    }
-
     int count = 0;
 
     public void countGoodNodes(TreeNode root, int max) {
@@ -32,7 +23,7 @@ public class CountGoodNodesInBinaryTree {
     }
 
     /**
-     * Keep track of maximum value in the path.
+     * Keep track of the maximum value in the path.
      * If current node's value is less than max value in the path,
      * then that node is not a {@code good node}.
      * <p>Time Complexity: O(n); where n = number of nodes

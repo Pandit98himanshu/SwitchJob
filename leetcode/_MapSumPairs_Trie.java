@@ -1,13 +1,16 @@
-/*
- * 677. Map Sum Pairs
- * https://leetcode.com/problems/map-sum-pairs/
- */
-
 package leetcode;
 
 import java.util.*;
 
-public class MapSumPairs_Trie {
+/**
+ * Created at : 19/08/21
+ * <p>
+ * <a href=https://leetcode.com/problems/map-sum-pairs/>677. Map Sum Pairs</a>
+ *
+ * @author Himanshu Shekhar
+ */
+
+public class _MapSumPairs_Trie {
     static class MapSum {
         static class TrieNode {
             Map<Character, TrieNode> children;

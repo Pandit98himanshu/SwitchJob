@@ -1,11 +1,15 @@
-/*
- * Word Ladder
- * https://leetcode.com/problems/word-ladder/
- * https://www.geeksforgeeks.org/word-ladder-set-2-bi-directional-bfs/
- */
 package leetcode;
 
 import java.util.*;
+
+/**
+ * Created at : 19/08/21
+ * <p>
+ * <a href=https://leetcode.com/problems/word-ladder/>Word Ladder</a>
+ *
+ * @see <a href=https://www.geeksforgeeks.org/word-ladder-set-2-bi-directional-bfs/>Word Ladder – Set 2</a>
+ * @author Himanshu Shekhar
+ */
 
 public class WordLadder {
     static class Pair {

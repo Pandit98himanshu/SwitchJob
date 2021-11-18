@@ -1,11 +1,12 @@
-/*
- * 1975. Maximum Matrix Sum
- * https://leetcode.com/problems/maximum-matrix-sum/
- */
-
 package leetcode;
 
 import java.util.*;
+
+/**
+ * <a href=https://leetcode.com/problems/maximum-matrix-sum/>1975. Maximum Matrix Sum</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class MaximumMatrixSum {
     /**

@@ -1,13 +1,16 @@
-/*
- * 23. Merge k Sorted Lists
- * https://leetcode.com/problems/merge-k-sorted-lists/
- */
-
 package leetcode;
 
 import datastructure.ListNode;
 
 import java.util.PriorityQueue;
+
+/**
+ * Created at : 29/09/21
+ * <p>
+ * <a href=https://leetcode.com/problems/merge-k-sorted-lists/>23. Merge k Sorted Lists</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class MergeKSortedLists {
     /**

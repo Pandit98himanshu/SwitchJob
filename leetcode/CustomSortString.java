@@ -1,17 +1,18 @@
-/*
- * 791. Custom Sort String
- * https://leetcode.com/problems/custom-sort-string/
- */
-
 package leetcode;
 
 import java.util.*;
+
+/**
+ * <a href=https://leetcode.com/problems/custom-sort-string/>791. Custom Sort String</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class CustomSortString {
     // Less efficient
     static class Solution1 {
         /**
-         * This methods finds 1st occurrence of char {@code c} in given char array {@code str}.
+         * This method finds 1st occurrence of char {@code c} in given char array {@code str}.
          * Here we used the technique of sorting an array according to the order defined by another array.
          * <p>Time Complexity: O(n + mlogn)}
          * <br>Space Complexity: O(n); where n = str.length() and m = order.length()</p>

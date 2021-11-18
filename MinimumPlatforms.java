@@ -1,9 +1,8 @@
-/*
- * Minimum Platforms
- * https://practice.geeksforgeeks.org/problems/minimum-platforms-1587115620/1#
- */
-
 import java.util.*;
+
+/**
+ * <a href=https://practice.geeksforgeeks.org/problems/minimum-platforms-1587115620/1#>Minimum Platforms</a>
+ */
 
 public class MinimumPlatforms {
     /**

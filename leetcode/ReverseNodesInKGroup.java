@@ -1,32 +1,14 @@
-/*
- * 25. Reverse Nodes in k-Group
- * https://leetcode.com/problems/reverse-nodes-in-k-group/
- */
-
 package leetcode;
 
+import datastructure.ListNode;
+
+/**
+ * <a href=https://leetcode.com/problems/reverse-nodes-in-k-group/>25. Reverse Nodes in k-Group</a>
+ *
+ * @author Himanshu Shekhar
+ */
+
 public class ReverseNodesInKGroup {
-
-    /**
-     * Definition for singly-linked list.
-     */
-    private static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-            this.next = null;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
 
     static class Solution {
         /**

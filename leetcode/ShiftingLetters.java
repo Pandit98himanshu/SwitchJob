@@ -1,13 +1,17 @@
-/*
- * 848. Shifting Letters
- * https://leetcode.com/problems/shifting-letters/
- */
-
 package leetcode;
+
+/**
+ * Created at : 10/09/21
+ * <p>
+ * <a href=https://leetcode.com/problems/shifting-letters/>848. Shifting Letters</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class ShiftingLetters {
     /**
      * <p>Time Complexity: O(n)
+     *
      * @return the final string after shifting
      */
     public String shiftingLetters(String s, int[] shifts) {

@@ -1,13 +1,21 @@
-/*
- * 56. Merge Intervals
- * https://leetcode.com/problems/merge-intervals/
- */
-
 package leetcode;
 
-import java.util.*;
+import java.util.Arrays;
+
+/**
+ * Created at : 28/08/21
+ * <p>
+ * <a href=https://leetcode.com/problems/merge-intervals/>56. Merge Intervals</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class MergeIntervals {
+    public static void main(String[] args) {
+        int[][] intervals = {{0, 0}, {1, 2}, {5, 5}, {2, 4}, {3, 3}, {5, 6}, {5, 6}, {4, 6}, {0, 0}, {1, 2}, {0, 2}, {4, 5}};
+        System.out.println(Arrays.deepToString(new MergeIntervals().merge1(intervals)));
+    }
+
     /**
      * <strong>Linear Search</strong>
      * <p>Time Complexity: O(n)
@@ -29,7 +37,7 @@ public class MergeIntervals {
         for (int i = 1; i < intervals.length; i++) {
             // if starting time of current interval is less than
             // or equal to ending time of max ending time, our interval doesn't end here
-            if (intervals[i][0] > maxEnd  && intervals[i][1] > maxEnd) {
+            if (intervals[i][0] > maxEnd && intervals[i][1] > maxEnd) {
                 mergedIntervals[k - 1][1] = maxEnd;
                 mergedIntervals[k++][0] = intervals[i][0];
             }
@@ -66,13 +74,9 @@ public class MergeIntervals {
     }
 
     private int[][] merge2Intervals(int[][] interval1, int[][] interval2, int i) {
-        if (interval1[i][1] > interval2[i][0]) {}
+        if (interval1[i][1] > interval2[i][0]) {
+        }
         // todo: write a method to merge 2 intervals copy from MergeKLists
         return new int[][]{{-1, -1}};
-    }
-
-    public static void main(String[] args) {
-        int[][] intervals = {{0,0},{1,2},{5,5},{2,4},{3,3},{5,6},{5,6},{4,6},{0,0},{1,2},{0,2},{4,5}};
-        System.out.println(Arrays.deepToString(new MergeIntervals().merge1(intervals)));
     }
 }

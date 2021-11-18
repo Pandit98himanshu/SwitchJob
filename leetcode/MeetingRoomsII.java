@@ -1,11 +1,14 @@
-/*
- * 253. Meeting Rooms II
- * https://leetcode.com/problems/meeting-rooms-ii/
- */
-
 package leetcode;
 
 import java.util.*;
+
+/**
+ * Created at : 06/09/21
+ * <p>
+ * <a href=https://leetcode.com/problems/meeting-rooms-ii/>253. Meeting Rooms II</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class MeetingRoomsII {
     /**

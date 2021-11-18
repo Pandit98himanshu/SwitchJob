@@ -1,9 +1,12 @@
-/*
- * 4. Median of Two Sorted Arrays
- * https://leetcode.com/problems/median-of-two-sorted-arrays/
- */
-
 package leetcode;
+
+/**
+ * Created at : 20/08/21
+ * <p>
+ * <a href=https://leetcode.com/problems/median-of-two-sorted-arrays/>4. Median of Two Sorted Arrays</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class MedianOfTwoSortedArrays {
     /**

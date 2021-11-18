@@ -1,11 +1,12 @@
-/*
- * 675. Cut Off Trees for Golf Event
- * https://leetcode.com/problems/cut-off-trees-for-golf-event/
- */
-
 package leetcode;
 
 import java.util.*;
+
+/**
+ * <a href=https://leetcode.com/problems/cut-off-trees-for-golf-event/>675. Cut Off Trees for Golf Event</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class CutOffTreesForGolfEvent {
     /**
@@ -18,10 +19,10 @@ public class CutOffTreesForGolfEvent {
      *     It is noted that DFS can ALSO find the shortest path,
      *     but it needs to find all feasible paths and find the shortest one.
      *     In this regard, BFS is much faster than DFS!
-     *     <br>src:<a href=https://leetcode.com/problems/cut-off-trees-for-golf-event/discuss/251517/Why-BFS-AND-NOT-DFS>leetcode discuss comment</a>
      * </p>
      * @return total number of minimum steps required to
      * cut all trees of forest in increasing order
+     * @see <a href=https://leetcode.com/problems/cut-off-trees-for-golf-event/discuss/251517/Why-BFS-AND-NOT-DFS>leetcode discuss comment</a>
      */
     public int cutOffTree(List<List<Integer>> forest) {
         // store all values & it's indexes in sorted order

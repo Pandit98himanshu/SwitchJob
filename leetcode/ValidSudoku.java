@@ -1,11 +1,14 @@
-/*
- * 36. Valid Sudoku
- * https://leetcode.com/problems/valid-sudoku/
- */
-
 package leetcode;
 
 import java.util.*;
+
+/**
+ * Created at : 21/08/21
+ * <p>
+ * <a href=https://leetcode.com/problems/valid-sudoku/>36. Valid Sudoku</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class ValidSudoku {
     /**

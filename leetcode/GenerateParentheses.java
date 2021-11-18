@@ -1,11 +1,14 @@
-/*
- * 22. Generate Parentheses
- * https://leetcode.com/problems/generate-parentheses/
- */
-
 package leetcode;
 
 import java.util.*;
+
+/**
+ * Created at : 27/08/21
+ * <p>
+ * <a href=https://leetcode.com/problems/generate-parentheses/>22. Generate Parentheses</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class GenerateParentheses {
     /**

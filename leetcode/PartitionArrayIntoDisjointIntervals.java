@@ -1,11 +1,14 @@
-/*
- * 915. Partition Array into Disjoint Intervals
- * https://leetcode.com/problems/partition-array-into-disjoint-intervals/
- */
-
 package leetcode;
 
 import java.util.Arrays;
+
+/**
+ * Created at : 19/08/21
+ * <p>
+ * <a href=https://leetcode.com/problems/partition-array-into-disjoint-intervals/>915. Partition Array into Disjoint Intervals</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class PartitionArrayIntoDisjointIntervals {
     static class Solution {

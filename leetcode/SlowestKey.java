@@ -1,9 +1,12 @@
-/*
- * 1629. Slowest Key
- * https://leetcode.com/problems/slowest-key/
- */
-
 package leetcode;
+
+/**
+ * Created at : 07/09/21
+ * <p>
+ * <a href=https://leetcode.com/problems/slowest-key/>1629. Slowest Key</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class SlowestKey {
     /**

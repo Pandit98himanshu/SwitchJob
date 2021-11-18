@@ -24,13 +24,13 @@ public class LetterCasePermutation {
         // add given word in the queue
         ans.offer(s);
         // change each letter of given string
-        for(int i = 0; i < s.length; i++) {
+        for (int i = 0; i < s.length; i++) {
             // skip digits
             if (s[i] >= '0' && s[i] <= '9')
                 continue;
             int size = ans.size();
             // iterate for all elements in queue
-            while(size-- > 0) {
+            while (size-- > 0) {
                 // took out the first one
                 char[] curr = ans.poll();
                 // add with current character as lowercase
@@ -81,7 +81,6 @@ public class LetterCasePermutation {
             permute(s, i + 1, ans);
         }
     }
-
 
     /**
      * <strong>Backtrack</strong> : 50 ms

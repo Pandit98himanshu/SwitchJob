@@ -1,9 +1,9 @@
-/*
- * Write 0, 1, ..., n in binary and add as if they were decimal numbers.
- * https://oeis.org/A067894
- */
-
 import java.util.Stack;
+
+/**
+ * Write 0, 1, ..., n in binary and add as if they were decimal numbers.
+ * @see <a href=https://oeis.org/A067894>oeis</a>
+ */
 
 public class DecimalSumOfBinaryNumbersFrom1ToN {
     /**

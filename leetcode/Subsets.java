@@ -1,14 +1,17 @@
-/*
- * 78. Subsets
- * https://leetcode.com/problems/subsets/
- */
-
 package leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+
+/**
+ * Created at : 21/08/21
+ * <p>
+ * <a href=https://leetcode.com/problems/subsets/>78. Subsets</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class Subsets {
     private final List<List<Integer>> ans = new ArrayList<>();

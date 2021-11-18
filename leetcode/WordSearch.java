@@ -1,13 +1,16 @@
-/*
- * 79. Word Search
- * https://leetcode.com/problems/word-search
- */
-
 package leetcode;
 
+/**
+ * Created at : 27/08/21
+ * <p>
+ * <a href=https://leetcode.com/problems/word-search>79. Word Search</a>
+ *
+ * @author Himanshu Shekhar
+ */
+
 public class WordSearch {
-    private boolean isFound = false;
     private final int[] d = {0, 1, 0, -1, 0};
+    private boolean isFound = false;
 
     /**
      * <strong>DFS</strong>
@@ -58,7 +61,7 @@ public class WordSearch {
     }
 
     public static void main(String[] args) {
-        char[][] board = {{'a','b','c'},{'a','e','d'},{'a','f','g'}};
+        char[][] board = {{'a', 'b', 'c'}, {'a', 'e', 'd'}, {'a', 'f', 'g'}};
         String word = "eaabcdgfa";
         System.out.println(new WordSearch().exist(board, word));
     }

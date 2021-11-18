@@ -1,11 +1,14 @@
-/*
- * 5805. The Number of the Smallest Unoccupied Chair
- * https://leetcode.com/problems/the-number-of-the-smallest-unoccupied-chair/
- */
-
 package leetcode;
 
 import java.util.*;
+
+/**
+ * Created at : 19/08/21
+ * <p>
+ * <a href=https://leetcode.com/problems/the-number-of-the-smallest-unoccupied-chair/>5805. The Number of the Smallest Unoccupied Chair</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class TheNumberOfTheSmallestUnoccupiedChair {
 

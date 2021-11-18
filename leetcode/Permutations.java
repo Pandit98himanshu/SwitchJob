@@ -1,13 +1,16 @@
-/*
- * 46. Permutations
- * https://leetcode.com/problems/permutations/
- */
-
 package leetcode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
+/**
+ * Created at : 12/10/21
+ * <p>
+ * <a href=https://leetcode.com/problems/permutations/>46. Permutations</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class Permutations {
     private final List<List<Integer>> ans = new ArrayList<>();

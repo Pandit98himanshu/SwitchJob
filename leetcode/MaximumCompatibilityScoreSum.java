@@ -1,11 +1,14 @@
-/*
- * 5825. Maximum Compatibility Score Sum
- * https://leetcode.com/problems/maximum-compatibility-score-sum/
- */
-
 package leetcode;
 
 import java.util.*;
+
+/**
+ * Created at : 02/08/21
+ * <p>
+ * <a href=https://leetcode.com/problems/maximum-compatibility-score-sum/>5825. Maximum Compatibility Score Sum</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class MaximumCompatibilityScoreSum {
     static class Solution {

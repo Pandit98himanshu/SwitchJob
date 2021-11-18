@@ -1,13 +1,21 @@
-/*
- * 547. Number of Provinces
- * https://leetcode.com/problems/number-of-provinces/
- */
-
 package leetcode;
 
 import datastructure.disjointset.OptimizedDisjointSet;
 
+/**
+ * Created at : 26/08/21
+ * <p>
+ * <a href=https://leetcode.com/problems/number-of-provinces/>547. Number of Provinces</a>
+ *
+ * @author Himanshu Shekhar
+ */
+
 public class NumberOfProvinces {
+    public static void main(String[] args) {
+        int[][] isConnected = {{1, 0, 0, 1}, {0, 1, 1, 0}, {0, 1, 1, 1}, {1, 0, 1, 1}};
+        System.out.println(new NumberOfProvinces().findCircleNum(isConnected));
+    }
+
     /**
      * <p>Time Complexity: O(n<sup>2</sup>); where n = isConnected.length
      *
@@ -35,10 +43,5 @@ public class NumberOfProvinces {
                 provinces++;
 
         return provinces;
-    }
-
-    public static void main(String[] args) {
-        int[][] isConnected = {{1, 0, 0, 1}, {0, 1, 1, 0}, {0, 1, 1, 1}, {1, 0, 1, 1}};
-        System.out.println(new NumberOfProvinces().findCircleNum(isConnected));
     }
 }

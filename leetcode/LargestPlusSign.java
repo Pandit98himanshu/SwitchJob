@@ -1,11 +1,14 @@
-/*
- * 764. Largest Plus Sign
- * https://leetcode.com/problems/largest-plus-sign/
- */
-
 package leetcode;
 
 import java.util.*;
+
+/**
+ * Created at : 10/09/21
+ * <p>
+ * <a href=https://leetcode.com/problems/largest-plus-sign/>764. Largest Plus Sign</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class LargestPlusSign {
     /**

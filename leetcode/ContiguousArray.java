@@ -1,15 +1,16 @@
-/*
- * 525. Contiguous Array
- * https://leetcode.com/problems/contiguous-array/
- */
-
 package leetcode;
 
 import java.util.*;
 
+/**
+ * <a href=https://leetcode.com/problems/contiguous-array/>525. Contiguous Array</a>
+ *
+ * @author Himanshu Shekhar
+ */
+
 public class ContiguousArray {
     /**
-     * <p>TIme Complexity: O(n)
+     * <p>Time Complexity: O(n)
      * <br>Space Complexity: O(n)
      * @return
      */

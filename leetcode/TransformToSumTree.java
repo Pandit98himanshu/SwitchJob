@@ -1,11 +1,14 @@
-/*
- * Transform to Sum Tree
- * https://practice.geeksforgeeks.org/problems/transform-to-sum-tree/1
- */
-
 package leetcode;
 
 import datastructure.TreeNode;
+
+/**
+ * Created at : 08/09/21
+ * <p>
+ * <a href=https://practice.geeksforgeeks.org/problems/transform-to-sum-tree/1>Transform to Sum Tree</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class TransformToSumTree {
     public void toSumTree(TreeNode root) {

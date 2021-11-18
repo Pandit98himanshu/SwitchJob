@@ -15,7 +15,7 @@ import java.util.Queue;
 public class MinimumOperationsToConvertNumber {
     /**
      * <strong>BFS</strong>
-     * Copied from <a href=https://leetcode.com/problems/minimum-operations-to-convert-number/discuss/1549960/C++-or-BFS-or-Clean-code>leetcode discuss</a>
+     * <p>Copied from <a href=https://leetcode.com/problems/minimum-operations-to-convert-number/discuss/1549960/C++-or-BFS-or-Clean-code>leetcode discuss</a>
      */
     public int minimumOperations(int[] nums, int start, int goal) {
         Queue<Integer> q = new LinkedList<>();

@@ -1,11 +1,12 @@
-/*
- * 322. Coin Change
- * https://leetcode.com/problems/coin-change/
- */
-
 package leetcode;
 
 import java.util.*;
+
+/**
+ * <a href=https://leetcode.com/problems/coin-change/>322. Coin Change</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class CoinChange {
     /**

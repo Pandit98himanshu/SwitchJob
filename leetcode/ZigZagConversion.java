@@ -1,10 +1,14 @@
-/*
- * 6. ZigZag Conversion
- * https://leetcode.com/problems/zigzag-conversion/
- */
 package leetcode;
 
 import java.util.*;
+
+/**
+ * Created at : 02/09/21
+ * <p>
+ * <a href=https://leetcode.com/problems/zigzag-conversion/>6. ZigZag Conversion</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 // todo: add comment explanation
 class ZigZagConversion {

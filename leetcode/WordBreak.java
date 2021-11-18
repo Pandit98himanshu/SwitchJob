@@ -1,11 +1,14 @@
-/*
- * 139. Word Break
- * https://leetcode.com/problems/word-break/
- */
-
 package leetcode;
 
 import java.util.*;
+
+/**
+ * Created at : 01/09/21
+ * <p>
+ * <a href=https://leetcode.com/problems/word-break/>139. Word Break</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class WordBreak {
     /**
@@ -13,7 +16,7 @@ public class WordBreak {
      * <p>Time Complexity: O(n<sup>3</sup>)
      * <br>Space Complexity: O(n)
      *
-     * @see for complexities? go to <a href=https://leetcode.com/problems/word-break/solution/>leetcode solution video</a>
+     * @see <a href=https://leetcode.com/problems/word-break/solution/>leetcode solution video</a>
      */
     public boolean wordBreak(String s, List<String> wordDict) {
         Set<String> words = new HashSet<>(wordDict);
@@ -35,7 +38,7 @@ public class WordBreak {
      * <p>Time Complexity: O(n<sup>3</sup>)
      * <br>Space Complexity: O(n)
      *
-     * @see for complexities? go to <a href=https://leetcode.com/problems/word-break/solution/>leetcode solution video</a>
+     * @see <a href=https://leetcode.com/problems/word-break/solution/>leetcode solution video</a>
      */
     private boolean wordBreakUtil(String s, Set<String> wordDict, int l, Boolean[] memo) {
         if (l == s.length())
@@ -59,7 +62,7 @@ public class WordBreak {
     /**
      * <strong>Brute Force</strong>
      * <p>Time Complexity: O(2<sup>n</sup>)
-     * Space Complexity: O(n)
+     * <br>Space Complexity: O(n)
      */
     private boolean canBeSegmented = false;
 

@@ -1,10 +1,14 @@
-/*
- * 1. Two Sum
- * https://leetcode.com/problems/two-sum/
- */
 package leetcode;
 
 import java.util.*;
+
+/**
+ * Created at : 02/08/21
+ * <p>
+ * <a href=https://leetcode.com/problems/two-sum/>1. Two Sum</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 class TwoSum {
     /**

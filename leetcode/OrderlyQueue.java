@@ -1,11 +1,14 @@
-/*
- * 899. Orderly Queue
- * https://leetcode.com/problems/orderly-queue/
- */
-
 package leetcode;
 
 import java.util.Arrays;
+
+/**
+ * Created at : 06/09/21
+ * <p>
+ * <a href=https://leetcode.com/problems/orderly-queue/>899. Orderly Queue</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class OrderlyQueue {
     /**

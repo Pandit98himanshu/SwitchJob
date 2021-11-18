@@ -1,12 +1,23 @@
-/*
- * 7. Reverse Integer
- * https://leetcode.com/problems/reverse-integer/
- */
 package leetcode;
 
-import java.util.*;
+import java.util.Scanner;
+
+/**
+ * Created at : 19/08/21
+ * <p>
+ * <a href=https://leetcode.com/problems/reverse-integer/>7. Reverse Integer</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 class ReverseInteger {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+
+        System.out.println(new Solution().reverse(x));
+    }
+
     static class Solution {
         public int reverse(int x) {
             StringBuilder sb = new StringBuilder(String.valueOf(x));
@@ -28,12 +39,5 @@ class ReverseInteger {
             }
             return ans;
         }
-    }
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int x = sc.nextInt();
-
-        System.out.println(new Solution().reverse(x));
     }
 }

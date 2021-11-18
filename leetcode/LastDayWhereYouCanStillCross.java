@@ -1,14 +1,15 @@
-/*
- * 1970. Last Day Where You Can Still Cross
- * https://leetcode.com/problems/last-day-where-you-can-still-cross/
- */
-
 package leetcode;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Queue;
+
+/**
+ * <a href=https://leetcode.com/problems/last-day-where-you-can-still-cross/>1970. Last Day Where You Can Still Cross</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class LastDayWhereYouCanStillCross {
     public int latestDayToCross3(int row, int col, int[][] cells) {

@@ -1,11 +1,14 @@
-/*
- * 1964. Find the Longest Valid Obstacle Course at Each Position
- * https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position/
- */
-
 package leetcode;
 
-import java.util.*;
+import java.util.TreeMap;
+
+/**
+ * Created at : 08/08/21
+ * <p>
+ * <a href=https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position/>1964. Find the Longest Valid Obstacle Course at Each Position</a>
+ *
+ * @author Himanshu Shekhar
+ */
 
 public class FindTheLongestValidObstacleCourseAtEachPosition {
     public int[] longestObstacleCourseAtEachPosition(int[] obstacle) {
@@ -29,5 +32,4 @@ public class FindTheLongestValidObstacleCourseAtEachPosition {
         }
         return obstacle;
     }
-
 }
