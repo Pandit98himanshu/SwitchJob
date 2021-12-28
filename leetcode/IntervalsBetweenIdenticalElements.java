@@ -17,15 +17,16 @@ public class IntervalsBetweenIdenticalElements {
     public long[] getDistances(int[] arr) {
         long[] ans = new long[arr.length];
         // left to right
-        getDistancesHelper(ans, arr, 0, arr.length-1, 1);
+        getDistancesHelper(ans, arr, 0, arr.length - 1, 1);
 
         // right to left
-        getDistancesHelper(ans, arr, arr.length-1, 0, -1);
+        getDistancesHelper(ans, arr, arr.length - 1, 0, -1);
 
         return ans;
     }
+
     private void getDistancesHelper(long[] ans, int[] arr, int start, int end, int increment) {
-        List<Integer>[] map = new List[(int)1e5+1];
+        List<Integer>[] map = new List[(int) 1e5 + 1];
         for (int i = start; i <= end; i += increment) {
             List<Integer> indices = map[arr[i]];
             if (indices == null)
