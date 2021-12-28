@@ -12,25 +12,27 @@ import java.util.*;
 
 public class WordBreak {
     /**
-     * <strong>Dynamic Programming</strong>
+     * <strong>Dynamic Programming - Bottom Up</strong>
      * <p>Time Complexity: O(n<sup>3</sup>)
      * <br>Space Complexity: O(n)
-     *
-     * @see <a href=https://leetcode.com/problems/word-break/solution/>leetcode solution video</a>
      */
     public boolean wordBreak(String s, List<String> wordDict) {
-        Set<String> words = new HashSet<>(wordDict);
-        boolean[] dp = new boolean[s.length() + 1];
-        dp[0] = true;
-        for (int i = 0; i < s.length(); i++) {
-            for (int j = 0; j < i; j++) {
-                if (dp[j] && words.contains(s.substring(j, i))) {
-                    dp[i] = true;
-                    break;
-                }
+        int n = s.length();
+        // dp[i] states, whether it is possible to break
+        // till s[i - 1] a/c to rules of the question
+        boolean[] dp = new boolean[n + 1];
+        dp[0] = true;   // string with length 0 is always possible to make
+        for (int i = 1; i <= n; i++) {
+            // since we can use any word any number of times
+            // we have to iterate whole set of words each time
+            for (String word : wordDict) {
+                int start = i - word.length();
+                // if any word is present in dict
+                if (start >= 0 && s.substring(start, i).equals(word))
+                    dp[i] = dp[i] || dp[start];
             }
         }
-        return dp[s.length()];
+        return dp[n];
     }
 
     /**

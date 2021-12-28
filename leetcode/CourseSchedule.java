@@ -17,9 +17,6 @@ public class CourseSchedule {
      * <p>Copied from <a href=https://leetcode.com/problems/course-schedule/solution/>leetcode solution</a>
      * <p>Time Complexity: O(E+V)
      * <br>Space Complexity: O(E+V)
-     * @param numCourses
-     * @param prerequisites
-     * @return
      */
     public boolean canFinish(int numCourses, int[][] prerequisites) {
 

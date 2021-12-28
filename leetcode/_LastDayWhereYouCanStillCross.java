@@ -11,7 +11,7 @@ import java.util.Queue;
  * @author Himanshu Shekhar
  */
 
-public class LastDayWhereYouCanStillCross {
+public class _LastDayWhereYouCanStillCross {
     public int latestDayToCross3(int row, int col, int[][] cells) {
         int currentDay = 0;
         int[][][] matrix = new int[row][col][2];
