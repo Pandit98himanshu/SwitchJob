@@ -1,8 +1,6 @@
-package objectorienteddesign.DocumentService.src;
-
+import objectorienteddesign.DocumentService;
 public interface Operations {
     public int create(String username, Document doc);
-
     public Document read(String user, int id);
 
     public void edit(String user, int id, Document doc);

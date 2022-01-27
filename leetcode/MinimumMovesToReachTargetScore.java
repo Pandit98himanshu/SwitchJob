@@ -1,7 +1,7 @@
 package leetcode;
 
 /**
- * Created at : 16/01/22
+ * Created at : 15/01/22
  * <p>
  * <a href=https://leetcode.com/problems/minimum-moves-to-reach-target-score/>5194. Minimum Moves to Reach Target Score</a>
  *
@@ -10,10 +10,8 @@ package leetcode;
 
 public class MinimumMovesToReachTargetScore {
     /**
-     * DP
-     * @param target
-     * @param maxDoubles
-     * @return
+     * <strong>DP</strong>
+     * <p>Time Complexity: O(target * maxDoubles)
      */
     public int minMoves(int target, int maxDoubles) {
         int[][] dp = new int[target + 1][maxDoubles + 1];
@@ -39,10 +37,8 @@ public class MinimumMovesToReachTargetScore {
     }
 
     /**
-     * Recursion
-     * @param target
-     * @param maxDoubles
-     * @return
+     * <strong>Recursion</strong>
+     * <p>Time Complexity: O(2<sup>n</sup>)
      */
     public int minMoves1(int target, int maxDoubles) {
 
