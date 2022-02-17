@@ -63,7 +63,7 @@ public class _SegmentTree {
         return leftSum + rightSum;
     }
     
-    public SegmentTree(int[] nums) {
+    public void SegmentTree(int[] nums) {
         this.n = nums.length;
         this.nums = nums;
         

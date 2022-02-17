@@ -1,3 +1,5 @@
+package standard;
+
 public class NQueensProblem {
 	final static int N = 6; // size of chess board & number of queens
 	
