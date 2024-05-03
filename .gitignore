@@ -1,5 +1,6 @@
 .DS_Store
 .idea
+.out
 *.class
 *.iml
 *.swp
