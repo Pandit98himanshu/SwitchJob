@@ -1,6 +1,12 @@
 .DS_Store
+.Trashes
+.Spotlight-V100
+.LSOverride
 .idea
 out
 *.class
 *.iml
 *.swp
+.vscode/*
+*.vsix
+.history/
