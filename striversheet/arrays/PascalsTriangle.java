@@ -1,4 +1,4 @@
-package striversheet.arrays;
+package striversheet.Arrays;
 
 import java.util.ArrayList;
 import java.util.List;
