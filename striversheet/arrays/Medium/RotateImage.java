@@ -23,7 +23,7 @@ class Solution {
         // above 2 steps will rotate the matrix by 90° clockwise
     }
 	/*
-	 * TC: O(n²)
+	 * TC: O(n(n+1)/2) = O(n²)
 	 */
     private static void transpose(int[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
