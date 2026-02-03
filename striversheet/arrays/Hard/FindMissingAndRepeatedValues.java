@@ -1,5 +1,7 @@
-package striversheet.Arrays.Hard;
-
+/**
+ * 2965. Find Missing and Repeated Values
+ * https://leetcode.com/problems/find-missing-and-repeated-values
+ */
 class Solution {
 	/*
 	 * TC: O(n²)
@@ -72,7 +74,6 @@ public class FindMissingAndRepeatedValues {
 				{207,30,18,132,221,78,619,654,1052,273,851,57,1160,816,304,1280,520,682,792,17,451,236,36,319,650,797,216,1281,936,130,485,501,500,247,114,574}
 		};
 		int[] result = new Solution().findMissingAndRepeatedValues(grid);
-		System.out.println("Repeated Value: " + result[0]);
-		System.out.println("Missing Value: " + result[1]);
+		System.out.println(java.util.Arrays.toString(result));
 	}
 }

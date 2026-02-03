@@ -1,5 +1,3 @@
-package striversheet.Arrays.Hard;
-
 import java.util.HashMap;
 import java.util.Map;
 

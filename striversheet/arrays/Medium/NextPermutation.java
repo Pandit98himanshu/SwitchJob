@@ -1,5 +1,3 @@
-package striversheet.Arrays.Medium;
-
 import java.util.Arrays;
 /**
  * Next Permutation

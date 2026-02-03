@@ -1,5 +1,3 @@
-package striversheet.Arrays.Medium;
-
 /*
  * https://leetcode.com/problems/sort-colors
  */

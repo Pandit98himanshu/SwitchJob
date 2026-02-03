@@ -1,4 +1,3 @@
-package striversheet.Arrays.Medium;
 /*
  * https://leetcode.com/problems/majority-element
  */

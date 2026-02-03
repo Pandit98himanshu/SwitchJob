@@ -1,5 +1,3 @@
-package striversheet.Arrays.Medium;
-
 /*
  * https://leetcode.com/problems/maximum-subarray/
  */
@@ -39,7 +37,7 @@ class Solution {
 	 * Kadane's algo.
 	 * TC: O(n)
 	 */
-	public int maxSubArray(int[] nums) {
+	public int maxSubArray1(int[] nums) {
 		int sumSoFar = Integer.MIN_VALUE, maxSum = Integer.MIN_VALUE;
 		for (int i = 0; i < nums.length; i++) {
 			if (sumSoFar < 0 && sumSoFar < nums[i]) {
