@@ -13,45 +13,33 @@ class Solution {
 		return mergeSort(arr, 0, arr.length - 1);
 	}
 	private int mergeSort(int[] arr, int l, int r) {
-		int count = 0;
-		if (l < r) {
-			int mid = (l + r) / 2;
-			count += mergeSort(arr, l, mid);
-			count += mergeSort(arr, mid + 1, r);
-			count += mergeAndCountInversion(arr, l, mid, r);
-		}
+		if (l >= r) return 0;
+
+		int mid = (l + r) / 2;
+		int count = mergeSort(arr, l, mid) + mergeSort(arr, mid + 1, r);
+		count += mergeAndCountInversion(arr, l, mid, r);
 		return count;
 	}
 	private int mergeAndCountInversion(int[] arr, int l, int mid, int r) {
-		int n1 = mid - l + 1;
-		int n2 = r - mid;
-
-		// copy array elements into another array
-		int[] arr1 = new int[n1];
-		int[] arr2 = new int[n2];
-		for (int i = 0; i < n1; i++)
-			arr1[i] = arr[i + l];
-		for (int i = 0; i < n2; i++)
-			arr2[i] = arr[i + mid + 1];
-
 		int count = 0;
+		int i = l, j = mid + 1, k = 0;
+		int[] temp = new int[r - l + 1];
 		// merge both sorted arrays
-		int i = 0, j = 0, k = l;
-		while (i < n1 && j < n2) {
-			if (arr1[i] <= arr2[j]) {
-				arr[k++] = arr1[i++];
+		while (i <= mid && j <= r) {
+			if (arr[i] <= arr[j]) {
+				temp[k++] = arr[i++];
 			} else {					// there's an inversion
-				arr[k++] = arr2[j++];
-				count += n1 - i;		// since arr1 is sorted, all ele ∈ (i, n1] is also greater than arr2[j]
+				temp[k++] = arr[j++];
+				count += mid - i + 1;	// since arr1 is sorted, all ele ∈ (i, n1] is also greater than arr2[j]
 			}
 		}
 
 		// copy remaining elements
-		while (i < n1)
-			arr[k++] = arr1[i++];
-		while (j < n2)
-			arr[k++] = arr2[j++];
-
+		while (i <= mid)
+			temp[k++] = arr[i++];
+		while (j <= r)
+			temp[k++] = arr[j++];
+		System.arraycopy(temp, 0, arr, l, temp.length);
 		return count;
 	}
 }
