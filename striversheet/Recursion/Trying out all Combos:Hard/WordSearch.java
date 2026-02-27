@@ -32,7 +32,7 @@ class Solution {
 		boolean temp = false;
 
 		char persistValue = board[x][y];	// retain the value
-		board[x][y] = '#';					// mark as visited	[NOTE: can also use visited data-structure]
+		board[x][y] = '#';					// mark as visited	[NOTE: can also use visited data-structure, but it will increase space-complexity]
 
 		for (int d = 0; d < 4; d++) {
 			int nextX = x + dirs[d];
